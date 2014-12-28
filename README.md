@@ -1,4 +1,2 @@
 fadilf.github.io
-================
-
-Blog and repository website.
+This is the website where I show my projects on GitHub, my blog and my personal bio.
