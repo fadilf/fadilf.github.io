@@ -11,8 +11,9 @@ body {
 main {
   position: absolute;
   top: 47px;
-  left: 0;
-  height: calc(100% - 77px);
+  left: 0;/*
+  height: calc(100% - 77px);*/
+  height: 100%;
   width: 100%;
   text-align: center;
 }

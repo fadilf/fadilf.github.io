@@ -11,9 +11,10 @@ main {
   position: absolute;
   top: 47px;
   left: 0;
-  height: calc(100% - 77px);
+  height: 100%;
   width: 100%;
   text-align: center;
+  font-family: 'Open Sans', sans-serif;
 }
 nav {
   font-family: 'Roboto Slab', sans-serif;
@@ -161,4 +162,12 @@ footer a {
     right: 0em;
     width: 100%;
   }
+}
+h1 {
+  font-size: 4em;
+}
+#projects {
+  font-size: 3em;
+  width: calc(100% - 100px);
+  padding: 0px 50px;
 }
