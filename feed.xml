@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="utf-8"?>
+<rss version="2.0">
+<channel>
+<title>Fadil Eledath</title>
+<link>http://fadilf.github.io/</link>
+<description>Blog feed of Fadil Eledath.</description>
+  <item>
+    <title>Introductory Post</title>
+    <link>http://fadilf.github.io/blog/introductory-post/</link>
+    <guid>http://fadilf.github.io/blog/introductory-post/</guid>
+    <pubDate>Dec, 28 Nov 2014 19:47:00 GMT</pubDate>
+    <description>Hi. This is my first post on my first personal blog. I haven't had a blog before as I hadn't felt the need to do so. But times have changed, and now I feel otherwise. This website contains all the projects I have and am working on, my blog posts and a page about me. I will be writing more posts in the weeks to come. I guess I should introduce mysel...</description>
+  </item>
+</channel>
+</rss>

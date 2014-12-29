@@ -1,0 +1,3 @@
+User-agent: *
+Disalow: /header.html
+Disalow: /footer.html
