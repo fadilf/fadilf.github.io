@@ -1,4 +1,7 @@
 /* Template Code */
+@-ms-viewport {
+  width: device-width;
+}
 #header {
   left: 0;
   float: left;
