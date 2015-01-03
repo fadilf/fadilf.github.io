@@ -155,8 +155,7 @@ footer a {
     background-color: #f2f2f2;
   }
   #x7:checked + #main {
-    height: auto;
-    padding-top: 1em;
+    height: 145px;
   }
   #dropdown {
     position: relative;
