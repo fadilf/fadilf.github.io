@@ -99,7 +99,7 @@ footer a {
   color: #273;
   background: #f2f2f2;
 }
-@media (max-width: 530px) {
+@media (max-width: 415px) {
   .verticalbar {
     display: none;
   }
@@ -130,7 +130,7 @@ footer a {
     height: 0;
     overflow: hidden;
     z-index: 3000;
-    top: 3em;
+    top: 2.96em;
     text-align: left;
     transition: 0.5s;
   }
@@ -155,7 +155,7 @@ footer a {
     background-color: #f2f2f2;
   }
   #x7:checked + #main {
-    height: 145px;
+    height: 100px;
   }
   #dropdown {
     position: relative;
