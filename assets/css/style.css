@@ -10,7 +10,7 @@ body {
 
 #navbar {
 	width: 100%;
-	font-family: "Roboto";
+	font-family: "Roboto", sans-serif;
 	display: flex;
 	justify-content: space-between;
 	z-index: 2;
@@ -58,7 +58,7 @@ body {
 #header-bg {
 	max-width: 75em;
 	margin: 0 auto;
-	font-family: "Roboto";
+	font-family: "Roboto", sans-serif;
 	background: #000;
 }
 
@@ -128,7 +128,7 @@ h1 {
 	min-width: 10em;
 	height: 10em;
 	padding: 1em;
-	font-family: "Roboto";
+	font-family: "Roboto", sans-serif;
 	flex: 1;
 }
 
@@ -156,7 +156,7 @@ h1 {
 	width: 90%;
 	margin: 0 auto;
 	max-width: 60em;
-	font-family: "Merriweather";
+	font-family: "Merriweather", serif;
 	font-size: 1.1em;
 	background: #f0f0f0;
 	padding: 1em;
@@ -243,7 +243,7 @@ h1 {
 }
 
 #bio {
-	font-family: 'Merriweather';
+	font-family: "Merriweather", serif;
 }
 
 #bio-dp {
@@ -311,7 +311,7 @@ h1 {
 
 .box-list .box-title {
 	display: inline-block;
-	font-family: Roboto;
+	font-family: "Roboto", sans-serif;
 	font-size: 1.7em;
 	vertical-align: middle;
 	text-transform: uppercase;
