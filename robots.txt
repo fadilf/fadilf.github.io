@@ -1,4 +1,0 @@
-User-agent: *
-Disalow: /header.html
-Disalow: /footer.html
-Disalow: /README.md

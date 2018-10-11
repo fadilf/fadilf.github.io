@@ -1,0 +1,344 @@
+*,
+*:before,
+*:after {
+	box-sizing: border-box;
+}
+
+body {
+	margin: 0;
+}
+
+#navbar {
+	width: 100%;
+	font-family: "Roboto";
+	display: flex;
+	justify-content: space-between;
+	z-index: 2;
+	padding: .6em 0;
+	margin-bottom: 0;
+}
+
+#brand {
+	font-weight: 600;
+	font-size: 1.5em;
+	width: 8em;
+	line-height: 2em;
+	padding: .1em 1.1em;
+	display: inline-block;
+	text-decoration: none;
+	color: #000;
+}
+
+#links {
+	text-align: right;
+}
+
+#links a {
+	display: inline-block;
+	text-decoration: none;
+	color: darkolivegreen;
+	font-weight: 500;
+	font-size: 1.1em;
+	padding: 1em;
+}
+
+#navbar a {
+	box-shadow: inset 0 0 0 10em transparent;
+	transition: .2s;
+}
+
+#navbar #links a:hover {
+	box-shadow: inset 0 0 0 10em rgba(0, 0, 0, 0.1);
+}
+
+#navbar #brand:hover {
+	color: darkolivegreen;
+}
+
+#header-bg {
+	max-width: 75em;
+	margin: 0 auto;
+	font-family: "Roboto";
+	background: #000;
+}
+
+#video-container {
+	max-height: 30em;
+	overflow: hidden;
+	position: relative;
+}
+
+#video-container video {
+	width: 100%;
+	display: inline-block;
+	vertical-align: middle;
+}
+
+#video-container:before {
+	content: "";
+	display: block;
+	width: 100%;
+	height: 100%;
+	position: absolute;
+	background: #000;
+	opacity: 0.75;
+}
+
+#header-bg.image-bg {
+	position: relative;
+	background-size: cover;
+	background-position: center;
+	overflow: hidden;
+	height: 30em;
+	margin-top: 1em;
+}
+
+#header-bg.image-bg:before {
+	content: "";
+	display: block;
+	width: 100%;
+	height: 100%;
+	position: absolute;
+	background: #000;
+	opacity: 0.75;
+}
+
+h1 {
+	text-transform: uppercase;
+	font-size: 5em;
+	position: relative;
+	z-index: 1;
+	margin: .6em .2em -1.6em .5em;
+	color: #fff;
+}
+
+#boxes {
+	display: flex;
+	flex-wrap: wrap;
+	justify-content: center;
+	background-color: #efefef;
+	max-width: 50em;
+	margin: 0 auto;
+	position: relative;
+	top: -4em;
+	margin-bottom: -2em;
+}
+
+.box {
+	min-width: 10em;
+	height: 10em;
+	padding: 1em;
+	font-family: "Roboto";
+	flex: 1;
+}
+
+.box-content {
+	font-size: 1.4em;
+	padding: .3em .4em;
+	font-weight: 600;
+}
+
+.galleryb {
+	background-image: url(../icons/material/image-multiple.svg);
+	background-repeat: no-repeat;
+	background-position: center;
+	background-size: 2.5em;
+	cursor: pointer;
+	background-color: rgba(0,0,0,.05);
+	transition: .2s;
+}
+
+.galleryb:hover {
+	background-color: rgba(0,0,0,.15);
+}
+
+#content {
+	width: 90%;
+	margin: 0 auto;
+	max-width: 60em;
+	font-family: "Merriweather";
+	font-size: 1.1em;
+	background: #f0f0f0;
+	padding: 1em;
+}
+
+#content a {
+	text-decoration: none;
+	color: darkolivegreen;
+}
+
+#gallery-back {
+	position: fixed;
+	top: 0;
+	left: 0;
+	width: 100%;
+	height: 100%;
+	background: rgba(0, 0, 0, 0.7);
+	z-index: 2;
+	cursor: pointer;
+}
+
+#gallery {
+	position: fixed;
+	top: 10%;
+	left: 0;
+	right: 0;
+	margin: 0 auto;
+	width: 90%;
+	max-width: 70em;
+	min-height: 20em;
+	max-height: 40em;
+	height: 90%;
+	background: #e5e5e5;
+	display: flex;
+	align-content: flex-start;
+	justify-content: flex-start;
+	flex-flow: row wrap;
+	z-index: 3;
+	cursor: initial;
+	overflow: scroll;
+}
+
+#gallery .pic {
+	min-width: 15em;
+	height: 15em;
+	flex-grow: 1;
+	background-size: cover;
+	background-position: center;
+	cursor: pointer;
+	box-shadow: inset 0 0 0 20em transparent;
+	transition: .2s;
+}
+
+#gallery .pic:not(.viewing):hover {
+	box-shadow: inset 0 0 0 20em rgba(0,0,0,0.2);
+}
+
+#gallery .pic button,
+#gallery .pic span {
+	display: none;
+}
+
+#gallery .pic.viewing {
+	height: 100%;
+	width: 100%;
+	cursor: initial;
+}
+
+#gallery .pic.viewing button {
+	display: block;
+	border: 0;
+	height: 5em;
+	width: 5em;
+	background-image: url(/assets/icons/material/fullscreen-exit.svg);
+	background-size: contain;
+	background-position: center;
+	background-repeat: no-repeat;
+	outline: none;
+	cursor: pointer;
+}
+
+#gallery .pic.viewing span {
+	display: none;
+}
+
+#bio {
+	font-family: 'Merriweather';
+}
+
+#bio-dp {
+	margin: 2em auto;
+	border-radius: 50%;
+	height: 17em;
+	width: 17em;
+	background-image: url('../img/bio.png');
+	background-position: 0 20%;
+	background-size: cover;
+	box-shadow: inset 0 0 2px 7px rgba(84, 106, 47, 0.42);
+}
+
+#sign {
+	display: inline-block;
+	width: 4em;
+	height: 2em;
+	background: url(/assets/img/sign.png);
+	background-size: contain;
+	background-repeat: no-repeat;
+	background-position: center;
+	vertical-align: bottom;
+}
+
+#first {
+	text-align: center;
+	padding-bottom: 1em;
+	font-size: 2em;
+}
+
+#description {
+	margin: 0 auto;
+	max-width: 50em;
+	display: flex;
+	flex-wrap: wrap;
+}
+
+#description p {
+	box-sizing: border-box;
+	font-size: 1.2em;
+	width: 40%;
+	padding: 1em;
+}
+
+#description .d-image {
+	box-sizing: border-box;
+	width: 60%;
+	height: 20em;
+	background-size: cover;
+	background-position: center;
+	box-shadow: inset 0 0 0 7px rgba(0, 0, 5, 0.6);
+}
+
+#description .d-image:nth-of-type(2n) {
+	transform: scale(0.83) rotate(-1deg);
+}
+
+#description .d-image:nth-of-type(2n -1) {
+	transform: scale(0.83) rotate(1deg);
+}
+
+#list-wrapper {
+	display: flex;
+}
+
+.box-list .box-title {
+	display: inline-block;
+	font-family: Roboto;
+	font-size: 1.7em;
+	vertical-align: middle;
+	text-transform: uppercase;
+	line-height: 1.5em;
+	padding: .3em;
+	position: relative;
+}
+
+a.box-list {
+	color: white;
+	text-decoration: none;
+	width: 17em;
+	height: 13em;
+	text-align: center;
+	line-height: 13em;
+	margin: .5em;
+	background-size: cover !important;
+	background-position: center !important;
+	overflow: hidden;
+	position: relative;
+}
+
+a.box-list::before {
+    content: '';
+    display: block;
+    height: 100%;
+    width: 100%;
+    background: rgba(0, 10, 3, 0.7);
+    position: absolute;
+}
