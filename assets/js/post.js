@@ -7,6 +7,7 @@ $(document).ready(function(){
 	});
 	$("#gallery .pic").click(function(){
 		if(!$(this).hasClass("viewing") && !$(this).hasClass("closing")){
+			$("#gallery").addClass("opened");
 			$("#gallery .pic").removeClass("viewing");
 			$(this).addClass("viewing");
 		}
@@ -15,6 +16,7 @@ $(document).ready(function(){
 		$(this).parent().addClass("closing");
 		$(this).parent().removeClass("viewing");
 		setTimeout(function(){
+			$("#gallery").removeClass("opened");
 			$("#gallery .pic").removeClass("closing");
 		},100);
 	});
