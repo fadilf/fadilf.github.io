@@ -10,10 +10,12 @@ $(document).ready(function(){
 			$("#gallery").addClass("opened");
 			$("#gallery .pic").removeClass("viewing");
 			$(this).addClass("viewing");
+			$(this).css("background-image","url('"+$(this).attr("data-src")+"')");
 		}
 	});
 	$("#gallery .pic button").click(function(){
 		$(this).parent().addClass("closing");
+		$(this).css("background-image","url('"+$(this).attr("data-thumbnail")+"')");
 		$(this).parent().removeClass("viewing");
 		setTimeout(function(){
 			$("#gallery").removeClass("opened");
