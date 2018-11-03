@@ -225,6 +225,7 @@ h1 {
 	height: 100%;
 	width: 100%;
 	cursor: initial;
+	max-width: initial;
 }
 
 #gallery .pic.viewing button {
