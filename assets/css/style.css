@@ -47,12 +47,61 @@ body {
 	transition: .2s;
 }
 
+#menutitle {
+	display: none;
+	width: 1.3em;
+	display: inline-block;
+	
+}
+
+#menutitle .bar {
+	display: block;
+	width: 1.3em;
+	height: 4px;
+	background: #000;
+	margin: .2em 0;
+}
+
 #navbar #links a:hover {
 	box-shadow: inset 0 0 0 10em rgba(0, 0, 0, 0.1);
 }
 
 #navbar #brand:hover {
 	color: darkolivegreen;
+}
+
+
+@media (max-width: 43em) {
+	
+	#links a {
+		display: block;
+	}
+	
+	#links {
+		position: fixed;
+		z-index: 5;
+		background: #dadbf0;
+		width: 80%;
+		height: 100%;
+		max-width: 30em;
+		right: 0;
+		top: 0;
+		font-size: 1.1em;
+		text-align: right;
+	}
+	
+	#links a {
+		border-bottom: 1px solid;
+		width: calc(100% - 5em);
+		margin: 0 auto;
+	}
+
+	#menutitle {
+		display: block;
+		padding: 1.5em;
+		font-size: 1.5em;
+	}
+	
 }
 
 #header-bg {
