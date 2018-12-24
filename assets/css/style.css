@@ -6,6 +6,7 @@
 
 body {
 	margin: 0;
+	padding-top: 5em;
 }
 
 #navbar {
@@ -16,6 +17,9 @@ body {
 	z-index: 2;
 	padding: .6em 0;
 	margin-bottom: 0;
+	background: #fafafa;
+	position: fixed;
+	top: 0;
 }
 
 #brand {
@@ -47,19 +51,29 @@ body {
 	transition: .2s;
 }
 
-#menutitle {
+.menutitle {
 	display: none;
-	width: 1.3em;
-	display: inline-block;
-	
+	line-height: .1em;
+	position: fixed;
+	z-index: 10;
+	top: 0;
+	right: 0;
+	padding: .73em;
+	font-size: 1.7em;
+	cursor: pointer;
 }
 
-#menutitle .bar {
-	display: block;
+.menutitle .bar {
+	display: inline-block;
 	width: 1.3em;
 	height: 4px;
 	background: #000;
-	margin: .2em 0;
+}
+	
+.menutitle .bar {
+	transform: rotate(0deg) translate(0, 0);
+	opacity: 1;
+	transition: .2s;
 }
 
 #navbar #links a:hover {
@@ -70,8 +84,27 @@ body {
 	color: darkolivegreen;
 }
 
-
 @media (max-width: 43em) {
+	
+	body {
+		padding-top: 6em;
+	}
+	
+	.menutitle.open .bar:first-of-type {
+		transform: rotate(45deg) translate(20%, 170%);
+	}
+	
+	.menutitle.open .bar:nth-last-of-type(2) {
+		opacity: 0;
+	}
+	
+	.menutitle.open .bar:last-of-type {
+		transform: rotate(-45deg) translate(20%, -170%);
+	}
+	
+	.menutitle.open + #links {
+		right: 0;
+	}
 	
 	#links a {
 		display: block;
@@ -80,14 +113,16 @@ body {
 	#links {
 		position: fixed;
 		z-index: 5;
-		background: #dadbf0;
+		background: #e5e5e5;
 		width: 80%;
 		height: 100%;
 		max-width: 30em;
-		right: 0;
+		padding-top: 5em;
 		top: 0;
 		font-size: 1.1em;
-		text-align: right;
+		right: -100%;
+		transition: .2s;
+		color: #fff !important;
 	}
 	
 	#links a {
@@ -96,10 +131,8 @@ body {
 		margin: 0 auto;
 	}
 
-	#menutitle {
+	.menutitle {
 		display: block;
-		padding: 1.5em;
-		font-size: 1.5em;
 	}
 	
 }
@@ -340,6 +373,50 @@ h1 {
 	text-align: center;
 	padding-bottom: 1em;
 	font-size: 2em;
+}
+
+#head {
+	display: flex;
+	justify-content:center;
+	align-items: center;
+	width: 100%;
+	flex-wrap: wrap;
+}
+
+.head-s:first-of-type {
+	min-width: 20em;
+}
+
+.head-s:last-of-type {
+	max-width: 25em;
+}
+
+.head-s a {
+	box-sizing: border-box;
+	border-radius: 5px;
+	text-decoration: none;
+	display: block;
+	width: 100%;
+	color: #fff;
+	font-size: 1.2em;
+	padding: 1.6em 4.1em;
+	margin: 1em 0;
+	background: #799f37 no-repeat .8em .9em;
+	background-size: 2.6em;
+	transition: .2s;
+	max-width: 20em;
+}
+
+.head-s a:hover {
+	background-color: darkolivegreen;
+}
+
+.head-s a:first-of-type {
+	background-image: url(../img/sketch.svg);
+}
+
+.head-s a:last-of-type {
+	background-image: url(../img/www.svg);
 }
 
 #description {

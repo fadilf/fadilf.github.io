@@ -22,4 +22,7 @@ $(document).ready(function(){
 			$("#gallery .pic").removeClass("closing");
 		},100);
 	});
+	$(".menutitle").click(function(){
+		$(".menutitle").toggleClass("open");
+	});
 });
