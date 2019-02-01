@@ -1,43 +1,4 @@
-<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" ><generator uri="https://jekyllrb.com/" version="3.8.4">Jekyll</generator><link href="http://localhost:4000/feed.xml" rel="self" type="application/atom+xml" /><link href="http://localhost:4000/" rel="alternate" type="text/html" /><updated>2019-02-01T21:18:08+04:00</updated><id>http://localhost:4000/feed.xml</id><title type="html">Fadil Eledath</title><subtitle>I’m a senior high school student studying at Dubai International Academy, aspiring to be a Roboticist Entrepreneur.</subtitle><entry><title type="html">DelegatePal</title><link href="http://localhost:4000/web/delegatepal.html" rel="alternate" type="text/html" title="DelegatePal" /><published>2017-01-01T00:00:00+04:00</published><updated>2017-01-01T00:00:00+04:00</updated><id>http://localhost:4000/web/delegatepal</id><content type="html" xml:base="http://localhost:4000/web/delegatepal.html">&lt;h3 id=&quot;description&quot;&gt;Description&lt;/h3&gt;
-&lt;p&gt;DelegatePal is a website co-founded by me to help students taking part in MUN conferences prepare for their roles. It provides easy access to information scraped from various sources to allow users to search for data relevant to what they need. It evolved from MUNme into my Personal Project, which was eventually remade into the current version of DelegatePal. Later, I made a mobile app for it which has been installed nearly 4000 times. We have partnered with reputed MUN organizations such as Best Delegate, THIMUN, UN4MUN and MUN Impact to further the cause of MUN internationally.&lt;/p&gt;
-
-&lt;hr /&gt;
-&lt;h3 id=&quot;media&quot;&gt;Media&lt;/h3&gt;
-&lt;ul&gt;
-  &lt;li&gt;&lt;a href=&quot;https://delegatepal.com/&quot;&gt;Website&lt;/a&gt;&lt;/li&gt;
-  &lt;li&gt;&lt;a href=&quot;https://play.google.com/store/apps/details?id=com.delegatepal.app&quot;&gt;Mobile App&lt;/a&gt;&lt;/li&gt;
-  &lt;li&gt;&lt;a href=&quot;https://drive.google.com/file/d/1Te6GoGxPXc8GZpP4w4MsA4lp3V8NkAxs/view?usp=sharing&quot;&gt;Original Project Report&lt;/a&gt;&lt;/li&gt;
-  &lt;li&gt;&lt;a href=&quot;http://bestdelegate.com/new-model-un-research-database-delegatepal/&quot;&gt;Best Delegate Article&lt;/a&gt;&lt;/li&gt;
-  &lt;li&gt;&lt;a href=&quot;https://www.helpmymun.com/delegatepal-mun-research-tool/&quot;&gt;HelpMyMUN Profile&lt;/a&gt;&lt;/li&gt;
-&lt;/ul&gt;</content><author><name></name></author><summary type="html">Description DelegatePal is a website co-founded by me to help students taking part in MUN conferences prepare for their roles. It provides easy access to information scraped from various sources to allow users to search for data relevant to what they need. It evolved from MUNme into my Personal Project, which was eventually remade into the current version of DelegatePal. Later, I made a mobile app for it which has been installed nearly 4000 times. We have partnered with reputed MUN organizations such as Best Delegate, THIMUN, UN4MUN and MUN Impact to further the cause of MUN internationally.</summary></entry><entry><title type="html">Project Lily</title><link href="http://localhost:4000/projects/lily.html" rel="alternate" type="text/html" title="Project Lily" /><published>2017-01-01T00:00:00+04:00</published><updated>2017-01-01T00:00:00+04:00</updated><id>http://localhost:4000/projects/lily</id><content type="html" xml:base="http://localhost:4000/projects/lily.html">&lt;h3 id=&quot;description&quot;&gt;Description&lt;/h3&gt;
-&lt;p&gt;I led the Robot Project for my FLL team of 9, handling research, design and programming of a disaster recovery assisstance robot for flood zones.&lt;/p&gt;
-
-&lt;p&gt;Project Lily (initially called Filter Project) is designed as a robot that floats on the surface of flood water and filters it into an internal compartment. This filtration system is powered by a set of solar panels on top.&lt;/p&gt;
-
-&lt;p&gt;The robot roams on the flood water, being carried by the current, and when picked up by stranded civilians, provides them with clean water and food supplies within. Also, the robot senses when picked up and sends a distress signal to rescue workers to provide support based on its GPS coordinates.&lt;/p&gt;
-
-&lt;p&gt;All of this is controllable through an interface designed for the rescue teams to identify the locations of the robots which are meant to be deployed in large numbers as well as places where distress signals have been sent from.&lt;/p&gt;
-
-&lt;hr /&gt;
-&lt;h3 id=&quot;media&quot;&gt;Media&lt;/h3&gt;
-&lt;ul&gt;
-  &lt;li&gt;&lt;a href=&quot;https://docs.google.com/presentation/d/1pf029X7Sz6KUz8pdXOFqzyLyBBvwkAbQDTUEd3XKK2s/edit?usp=sharing&quot;&gt;Project Presentation&lt;/a&gt;&lt;/li&gt;
-&lt;/ul&gt;
-
-&lt;hr /&gt;
-&lt;h3 id=&quot;awards-won&quot;&gt;Awards Won:&lt;/h3&gt;
-&lt;ul&gt;
-  &lt;li&gt;1st Place for Most Innovative Solution at FLL MENA at Sharm Al Shaikh, Egypt (Arab Robotics Association)&lt;/li&gt;
-  &lt;li&gt;1st Place for Inspiration (Core Values) at FIRST Lego League UAE&lt;/li&gt;
-&lt;/ul&gt;</content><author><name></name></author><summary type="html">Description I led the Robot Project for my FLL team of 9, handling research, design and programming of a disaster recovery assisstance robot for flood zones.</summary></entry><entry><title type="html">Miato</title><link href="http://localhost:4000/projects/miato.html" rel="alternate" type="text/html" title="Miato" /><published>2016-01-01T00:00:00+04:00</published><updated>2016-01-01T00:00:00+04:00</updated><id>http://localhost:4000/projects/miato</id><content type="html" xml:base="http://localhost:4000/projects/miato.html">&lt;h3 id=&quot;description&quot;&gt;Description&lt;/h3&gt;
-&lt;p&gt;Miato was a device that allowed people to control household electronics over the Internet. The first prototype used USB cables to connect a central device to all controllable units in user’s house.
-The second prototype enabled the main device to communicate and power appliances without the need for wires, making it easier to use with compatible appliances.&lt;/p&gt;
-
-&lt;hr /&gt;
-&lt;h3 id=&quot;media&quot;&gt;Media&lt;/h3&gt;
-&lt;ul&gt;
-  &lt;li&gt;&lt;a href=&quot;https://drive.google.com/file/d/0B59ISxQGLizteURITlRtWkE5TmtZWUs0QWdGQ3JVbjVFcVdN/view?usp=sharing&quot;&gt;Project Brochure&lt;/a&gt;&lt;/li&gt;
-&lt;/ul&gt;</content><author><name></name></author><summary type="html">Description Miato was a device that allowed people to control household electronics over the Internet. The first prototype used USB cables to connect a central device to all controllable units in user’s house. The second prototype enabled the main device to communicate and power appliances without the need for wires, making it easier to use with compatible appliances.</summary></entry><entry><title type="html">Trashberry</title><link href="http://localhost:4000/projects/trashberry.html" rel="alternate" type="text/html" title="Trashberry" /><published>2016-01-01T00:00:00+04:00</published><updated>2016-01-01T00:00:00+04:00</updated><id>http://localhost:4000/projects/trashberry</id><content type="html" xml:base="http://localhost:4000/projects/trashberry.html">&lt;h3 id=&quot;description&quot;&gt;Description&lt;/h3&gt;
+<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" ><generator uri="https://jekyllrb.com/" version="3.8.4">Jekyll</generator><link href="http://localhost:4000/feed.xml" rel="self" type="application/atom+xml" /><link href="http://localhost:4000/" rel="alternate" type="text/html" /><updated>2019-02-01T21:21:42+04:00</updated><id>http://localhost:4000/feed.xml</id><title type="html">Fadil Eledath</title><subtitle>I’m a senior high school student studying at Dubai International Academy, aspiring to be a Roboticist Entrepreneur.</subtitle><entry><title type="html">Trashberry</title><link href="http://localhost:4000/projects/trashberry.html" rel="alternate" type="text/html" title="Trashberry" /><published>2017-01-02T00:00:00+04:00</published><updated>2017-01-02T00:00:00+04:00</updated><id>http://localhost:4000/projects/trashberry</id><content type="html" xml:base="http://localhost:4000/projects/trashberry.html">&lt;h3 id=&quot;description&quot;&gt;Description&lt;/h3&gt;
 &lt;p&gt;I conceptualized, designed and built a robotic vending machine and a broader ecosystem that provides incentives to stakeholders (customers, shop owners and manufacturers) to recycle waste.&lt;/p&gt;
 
 &lt;p&gt;Trashberry is a project that focuses on the issue of waste generated by food that can easily be recycled as well as the immense amount of money and energy spent in the process of automatic sorting and recycling machines. Typically, the automatic sorting process is extremely expensive due to the how advanced the machinery is and how much labor is required.&lt;/p&gt;
@@ -67,7 +28,46 @@ The second prototype enabled the main device to communicate and power appliances
   &lt;li&gt;Selected for National Innovation Exhibition&lt;/li&gt;
   &lt;li&gt;Emirates Energy Award - Special Recognition&lt;/li&gt;
   &lt;li&gt;2nd Best Scientific Innovation in Environmental Sciences at Think Science Fair 2017&lt;/li&gt;
-&lt;/ul&gt;</content><author><name></name></author><summary type="html">Description I conceptualized, designed and built a robotic vending machine and a broader ecosystem that provides incentives to stakeholders (customers, shop owners and manufacturers) to recycle waste.</summary></entry><entry><title type="html">Freecycle Dubai</title><link href="http://localhost:4000/web/freecycle.html" rel="alternate" type="text/html" title="Freecycle Dubai" /><published>2016-01-01T00:00:00+04:00</published><updated>2016-01-01T00:00:00+04:00</updated><id>http://localhost:4000/web/freecycle</id><content type="html" xml:base="http://localhost:4000/web/freecycle.html">&lt;h3 id=&quot;description&quot;&gt;Description&lt;/h3&gt;
+&lt;/ul&gt;</content><author><name></name></author><summary type="html">Description I conceptualized, designed and built a robotic vending machine and a broader ecosystem that provides incentives to stakeholders (customers, shop owners and manufacturers) to recycle waste.</summary></entry><entry><title type="html">Project Lily</title><link href="http://localhost:4000/projects/lily.html" rel="alternate" type="text/html" title="Project Lily" /><published>2017-01-01T00:00:00+04:00</published><updated>2017-01-01T00:00:00+04:00</updated><id>http://localhost:4000/projects/lily</id><content type="html" xml:base="http://localhost:4000/projects/lily.html">&lt;h3 id=&quot;description&quot;&gt;Description&lt;/h3&gt;
+&lt;p&gt;I led the Robot Project for my FLL team of 9, handling research, design and programming of a disaster recovery assisstance robot for flood zones.&lt;/p&gt;
+
+&lt;p&gt;Project Lily (initially called Filter Project) is designed as a robot that floats on the surface of flood water and filters it into an internal compartment. This filtration system is powered by a set of solar panels on top.&lt;/p&gt;
+
+&lt;p&gt;The robot roams on the flood water, being carried by the current, and when picked up by stranded civilians, provides them with clean water and food supplies within. Also, the robot senses when picked up and sends a distress signal to rescue workers to provide support based on its GPS coordinates.&lt;/p&gt;
+
+&lt;p&gt;All of this is controllable through an interface designed for the rescue teams to identify the locations of the robots which are meant to be deployed in large numbers as well as places where distress signals have been sent from.&lt;/p&gt;
+
+&lt;hr /&gt;
+&lt;h3 id=&quot;media&quot;&gt;Media&lt;/h3&gt;
+&lt;ul&gt;
+  &lt;li&gt;&lt;a href=&quot;https://docs.google.com/presentation/d/1pf029X7Sz6KUz8pdXOFqzyLyBBvwkAbQDTUEd3XKK2s/edit?usp=sharing&quot;&gt;Project Presentation&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;hr /&gt;
+&lt;h3 id=&quot;awards-won&quot;&gt;Awards Won:&lt;/h3&gt;
+&lt;ul&gt;
+  &lt;li&gt;1st Place for Most Innovative Solution at FLL MENA at Sharm Al Shaikh, Egypt (Arab Robotics Association)&lt;/li&gt;
+  &lt;li&gt;1st Place for Inspiration (Core Values) at FIRST Lego League UAE&lt;/li&gt;
+&lt;/ul&gt;</content><author><name></name></author><summary type="html">Description I led the Robot Project for my FLL team of 9, handling research, design and programming of a disaster recovery assisstance robot for flood zones.</summary></entry><entry><title type="html">DelegatePal</title><link href="http://localhost:4000/web/delegatepal.html" rel="alternate" type="text/html" title="DelegatePal" /><published>2017-01-01T00:00:00+04:00</published><updated>2017-01-01T00:00:00+04:00</updated><id>http://localhost:4000/web/delegatepal</id><content type="html" xml:base="http://localhost:4000/web/delegatepal.html">&lt;h3 id=&quot;description&quot;&gt;Description&lt;/h3&gt;
+&lt;p&gt;DelegatePal is a website co-founded by me to help students taking part in MUN conferences prepare for their roles. It provides easy access to information scraped from various sources to allow users to search for data relevant to what they need. It evolved from MUNme into my Personal Project, which was eventually remade into the current version of DelegatePal. Later, I made a mobile app for it which has been installed nearly 4000 times. We have partnered with reputed MUN organizations such as Best Delegate, THIMUN, UN4MUN and MUN Impact to further the cause of MUN internationally.&lt;/p&gt;
+
+&lt;hr /&gt;
+&lt;h3 id=&quot;media&quot;&gt;Media&lt;/h3&gt;
+&lt;ul&gt;
+  &lt;li&gt;&lt;a href=&quot;https://delegatepal.com/&quot;&gt;Website&lt;/a&gt;&lt;/li&gt;
+  &lt;li&gt;&lt;a href=&quot;https://play.google.com/store/apps/details?id=com.delegatepal.app&quot;&gt;Mobile App&lt;/a&gt;&lt;/li&gt;
+  &lt;li&gt;&lt;a href=&quot;https://drive.google.com/file/d/1Te6GoGxPXc8GZpP4w4MsA4lp3V8NkAxs/view?usp=sharing&quot;&gt;Original Project Report&lt;/a&gt;&lt;/li&gt;
+  &lt;li&gt;&lt;a href=&quot;http://bestdelegate.com/new-model-un-research-database-delegatepal/&quot;&gt;Best Delegate Article&lt;/a&gt;&lt;/li&gt;
+  &lt;li&gt;&lt;a href=&quot;https://www.helpmymun.com/delegatepal-mun-research-tool/&quot;&gt;HelpMyMUN Profile&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;</content><author><name></name></author><summary type="html">Description DelegatePal is a website co-founded by me to help students taking part in MUN conferences prepare for their roles. It provides easy access to information scraped from various sources to allow users to search for data relevant to what they need. It evolved from MUNme into my Personal Project, which was eventually remade into the current version of DelegatePal. Later, I made a mobile app for it which has been installed nearly 4000 times. We have partnered with reputed MUN organizations such as Best Delegate, THIMUN, UN4MUN and MUN Impact to further the cause of MUN internationally.</summary></entry><entry><title type="html">Miato</title><link href="http://localhost:4000/projects/miato.html" rel="alternate" type="text/html" title="Miato" /><published>2016-01-01T00:00:00+04:00</published><updated>2016-01-01T00:00:00+04:00</updated><id>http://localhost:4000/projects/miato</id><content type="html" xml:base="http://localhost:4000/projects/miato.html">&lt;h3 id=&quot;description&quot;&gt;Description&lt;/h3&gt;
+&lt;p&gt;Miato was a device that allowed people to control household electronics over the Internet. The first prototype used USB cables to connect a central device to all controllable units in user’s house.
+The second prototype enabled the main device to communicate and power appliances without the need for wires, making it easier to use with compatible appliances.&lt;/p&gt;
+
+&lt;hr /&gt;
+&lt;h3 id=&quot;media&quot;&gt;Media&lt;/h3&gt;
+&lt;ul&gt;
+  &lt;li&gt;&lt;a href=&quot;https://drive.google.com/file/d/0B59ISxQGLizteURITlRtWkE5TmtZWUs0QWdGQ3JVbjVFcVdN/view?usp=sharing&quot;&gt;Project Brochure&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;</content><author><name></name></author><summary type="html">Description Miato was a device that allowed people to control household electronics over the Internet. The first prototype used USB cables to connect a central device to all controllable units in user’s house. The second prototype enabled the main device to communicate and power appliances without the need for wires, making it easier to use with compatible appliances.</summary></entry><entry><title type="html">Freecycle Dubai</title><link href="http://localhost:4000/web/freecycle.html" rel="alternate" type="text/html" title="Freecycle Dubai" /><published>2016-01-01T00:00:00+04:00</published><updated>2016-01-01T00:00:00+04:00</updated><id>http://localhost:4000/web/freecycle</id><content type="html" xml:base="http://localhost:4000/web/freecycle.html">&lt;h3 id=&quot;description&quot;&gt;Description&lt;/h3&gt;
 &lt;p&gt;Freecycling is the practice of giving away items that are no longer necessary to the owner. There are global communities of Freecycling groups around the world, though such a group is lacking in Dubai. Because of this, I created an app as my Digital Design project that allows users to post listings online for various things that they no longer need as well as requests for things that they require that others might have.&lt;/p&gt;
 
 &lt;hr /&gt;
@@ -95,7 +95,20 @@ The second prototype enabled the main device to communicate and power appliances
 &lt;ul&gt;
   &lt;li&gt;1st Place WRO UAE&lt;/li&gt;
   &lt;li&gt;10th Place WRO International&lt;/li&gt;
-&lt;/ul&gt;</content><author><name></name></author><summary type="html">Description I programmed and built a remote controlled robotic rover with the purpose of collecting soil samples from harsh environments. The design, inspired by dandelions, incorporates a number of unique defence features to protect itself against extreme environment.</summary></entry><entry><title type="html">Project Theseus</title><link href="http://localhost:4000/projects/theseus.html" rel="alternate" type="text/html" title="Project Theseus" /><published>2014-01-01T00:00:00+04:00</published><updated>2014-01-01T00:00:00+04:00</updated><id>http://localhost:4000/projects/theseus</id><content type="html" xml:base="http://localhost:4000/projects/theseus.html">&lt;h3 id=&quot;description&quot;&gt;Description&lt;/h3&gt;
+&lt;/ul&gt;</content><author><name></name></author><summary type="html">Description I programmed and built a remote controlled robotic rover with the purpose of collecting soil samples from harsh environments. The design, inspired by dandelions, incorporates a number of unique defence features to protect itself against extreme environment.</summary></entry><entry><title type="html">Maverick Youth</title><link href="http://localhost:4000/web/maverick.html" rel="alternate" type="text/html" title="Maverick Youth" /><published>2014-01-01T00:00:00+04:00</published><updated>2014-01-01T00:00:00+04:00</updated><id>http://localhost:4000/web/maverick</id><content type="html" xml:base="http://localhost:4000/web/maverick.html">&lt;h3 id=&quot;description&quot;&gt;Description&lt;/h3&gt;
+&lt;p&gt;To provide a platform for high school students to publish articles expressing their views on relevant issues, I co-founded Maverick Youth (http://www.maverickyouth.com/) with my brother in 2014. I’m responsible for all aspects of technology.
+Over 330 articles have been published by students from all over the world.&lt;/p&gt;
+
+&lt;p&gt;Maverick Youth is a website that allows young people around the world to contribute articles that are reviewed by a staff of editors before being published for our audience to read. These articles are ideas that a student anywhere might want to express to a large group of people and can reach many through this platform.&lt;/p&gt;
+
+&lt;p&gt;In 2015 Maverick Youth created an online campaign to sell branded t-shirts and hoodies. All proceeds from the money raised from fundraising was spent on toys that were given to the children from the Ansar Special Needs School. The t-shirt designs were created by me and we eventually managed to raise over $250 for charity.&lt;/p&gt;
+
+&lt;hr /&gt;
+&lt;h3 id=&quot;media&quot;&gt;Media&lt;/h3&gt;
+&lt;ul&gt;
+  &lt;li&gt;&lt;a href=&quot;http://www.maverickyouth.com/us/&quot;&gt;About Page&lt;/a&gt;&lt;/li&gt;
+  &lt;li&gt;&lt;a href=&quot;https://www.facebook.com/TheMaverickYouth/&quot;&gt;Facebook Page&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;</content><author><name></name></author><summary type="html">Description To provide a platform for high school students to publish articles expressing their views on relevant issues, I co-founded Maverick Youth (http://www.maverickyouth.com/) with my brother in 2014. I’m responsible for all aspects of technology. Over 330 articles have been published by students from all over the world.</summary></entry><entry><title type="html">Project Theseus</title><link href="http://localhost:4000/projects/theseus.html" rel="alternate" type="text/html" title="Project Theseus" /><published>2014-01-01T00:00:00+04:00</published><updated>2014-01-01T00:00:00+04:00</updated><id>http://localhost:4000/projects/theseus</id><content type="html" xml:base="http://localhost:4000/projects/theseus.html">&lt;h3 id=&quot;description&quot;&gt;Description&lt;/h3&gt;
 &lt;p&gt;The aim of this project was to tackle the various hardships associated with space exploration on a surface such as the Moon using virtual reality.&lt;/p&gt;
 
 &lt;p&gt;A rover was designed to face the harsh conditions of travelling across the Moon’s surface while being controlled through an interface designed to virtually allow you to drive from the perspective of the rover, effectively seeing what it sees.&lt;/p&gt;
@@ -113,20 +126,7 @@ The second prototype enabled the main device to communicate and power appliances
 &lt;h3 id=&quot;awards-won&quot;&gt;Awards Won:&lt;/h3&gt;
 &lt;ul&gt;
   &lt;li&gt;1st Place WRO Dubai&lt;/li&gt;
-&lt;/ul&gt;</content><author><name></name></author><summary type="html">Description The aim of this project was to tackle the various hardships associated with space exploration on a surface such as the Moon using virtual reality.</summary></entry><entry><title type="html">Maverick Youth</title><link href="http://localhost:4000/web/maverick.html" rel="alternate" type="text/html" title="Maverick Youth" /><published>2014-01-01T00:00:00+04:00</published><updated>2014-01-01T00:00:00+04:00</updated><id>http://localhost:4000/web/maverick</id><content type="html" xml:base="http://localhost:4000/web/maverick.html">&lt;h3 id=&quot;description&quot;&gt;Description&lt;/h3&gt;
-&lt;p&gt;To provide a platform for high school students to publish articles expressing their views on relevant issues, I co-founded Maverick Youth (http://www.maverickyouth.com/) with my brother in 2014. I’m responsible for all aspects of technology.
-Over 330 articles have been published by students from all over the world.&lt;/p&gt;
-
-&lt;p&gt;Maverick Youth is a website that allows young people around the world to contribute articles that are reviewed by a staff of editors before being published for our audience to read. These articles are ideas that a student anywhere might want to express to a large group of people and can reach many through this platform.&lt;/p&gt;
-
-&lt;p&gt;In 2015 Maverick Youth created an online campaign to sell branded t-shirts and hoodies. All proceeds from the money raised from fundraising was spent on toys that were given to the children from the Ansar Special Needs School. The t-shirt designs were created by me and we eventually managed to raise over $250 for charity.&lt;/p&gt;
-
-&lt;hr /&gt;
-&lt;h3 id=&quot;media&quot;&gt;Media&lt;/h3&gt;
-&lt;ul&gt;
-  &lt;li&gt;&lt;a href=&quot;http://www.maverickyouth.com/us/&quot;&gt;About Page&lt;/a&gt;&lt;/li&gt;
-  &lt;li&gt;&lt;a href=&quot;https://www.facebook.com/TheMaverickYouth/&quot;&gt;Facebook Page&lt;/a&gt;&lt;/li&gt;
-&lt;/ul&gt;</content><author><name></name></author><summary type="html">Description To provide a platform for high school students to publish articles expressing their views on relevant issues, I co-founded Maverick Youth (http://www.maverickyouth.com/) with my brother in 2014. I’m responsible for all aspects of technology. Over 330 articles have been published by students from all over the world.</summary></entry><entry><title type="html">The Oasis Robots</title><link href="http://localhost:4000/projects/oasis.html" rel="alternate" type="text/html" title="The Oasis Robots" /><published>2013-01-01T00:00:00+04:00</published><updated>2013-01-01T00:00:00+04:00</updated><id>http://localhost:4000/projects/oasis</id><content type="html" xml:base="http://localhost:4000/projects/oasis.html">&lt;h3 id=&quot;description&quot;&gt;Description&lt;/h3&gt;
+&lt;/ul&gt;</content><author><name></name></author><summary type="html">Description The aim of this project was to tackle the various hardships associated with space exploration on a surface such as the Moon using virtual reality.</summary></entry><entry><title type="html">The Oasis Robots</title><link href="http://localhost:4000/projects/oasis.html" rel="alternate" type="text/html" title="The Oasis Robots" /><published>2013-01-01T00:00:00+04:00</published><updated>2013-01-01T00:00:00+04:00</updated><id>http://localhost:4000/projects/oasis</id><content type="html" xml:base="http://localhost:4000/projects/oasis.html">&lt;h3 id=&quot;description&quot;&gt;Description&lt;/h3&gt;
 &lt;p&gt;A project that was inspired by the increasingly deteriorating situation of various UNESCO recognized world heritage sites, these robots were created with the intent of cleaning up the various ancient systems of water that exist in Oman. Each individual robot served its own purpose as part of an ecosystem – a water-based robot that picked up tiny Lego pieces designed to simulate waste particles, a robotic joystick to manually control it remotely using Bluetooth, a dock to clear any collected debris from the robot and sort it while collecting energy using an automated solar panel.&lt;/p&gt;
 
 &lt;p&gt;Also, a wall cleaning unit wipes dirt off the sides of the tunnels at regular intervals to further ensure the safe passage of water.&lt;/p&gt;
