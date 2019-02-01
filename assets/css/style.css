@@ -69,7 +69,7 @@ body {
 	height: 4px;
 	background: #000;
 }
-	
+
 .menutitle .bar {
 	transform: rotate(0deg) translate(0, 0);
 	opacity: 1;
@@ -85,31 +85,31 @@ body {
 }
 
 @media (max-width: 43em) {
-	
+
 	body {
 		padding-top: 6em;
 	}
-	
+
 	.menutitle.open .bar:first-of-type {
 		transform: rotate(45deg) translate(20%, 170%);
 	}
-	
+
 	.menutitle.open .bar:nth-last-of-type(2) {
 		opacity: 0;
 	}
-	
+
 	.menutitle.open .bar:last-of-type {
 		transform: rotate(-45deg) translate(20%, -170%);
 	}
-	
+
 	.menutitle.open + #links {
 		right: 0;
 	}
-	
+
 	#links a {
 		display: block;
 	}
-	
+
 	#links {
 		position: fixed;
 		z-index: 5;
@@ -124,7 +124,7 @@ body {
 		transition: .2s;
 		color: #fff !important;
 	}
-	
+
 	#links a {
 		border-bottom: 1px solid;
 		width: calc(100% - 5em);
@@ -134,7 +134,7 @@ body {
 	.menutitle {
 		display: block;
 	}
-	
+
 }
 
 #header-bg {
@@ -192,6 +192,15 @@ h1 {
 	z-index: 1;
 	margin: .6em .2em -1.6em .5em;
 	color: #fff;
+}
+
+h1.hlist {
+	background: darkolivegreen;
+	padding: 0.4em 1em;
+	margin: .6em auto;
+	text-align: center;
+	font-size: 4em;
+	max-width: 15em;
 }
 
 #boxes {
@@ -452,6 +461,10 @@ h1 {
 
 #list-wrapper {
 	display: flex;
+	flex-wrap: wrap;
+	justify-content: center;
+	max-width: 46em;
+	margin: 0 auto;
 }
 
 .box-list .box-title {
@@ -468,7 +481,8 @@ h1 {
 a.box-list {
 	color: white;
 	text-decoration: none;
-	width: 17em;
+	min-width: 12em;
+	max-width: 14em;
 	height: 13em;
 	text-align: center;
 	line-height: 13em;
@@ -477,6 +491,7 @@ a.box-list {
 	background-position: center !important;
 	overflow: hidden;
 	position: relative;
+	flex-grow: 1;
 }
 
 a.box-list::before {
