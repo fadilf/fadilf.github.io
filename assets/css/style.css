@@ -4,9 +4,17 @@
 	box-sizing: border-box;
 }
 
+html {
+	height: 100%;
+	box-sizing: border-box;
+}
+
 body {
-	margin: 0;
 	padding-top: 5em;
+  position: relative;
+  margin: 0;
+  padding-bottom: 6rem;
+  min-height: 100%;
 }
 
 #navbar {
@@ -454,7 +462,7 @@ h1.hlist {
 	height: 20em;
 	background-size: cover;
 	background-position: center;
-	box-shadow: inset 0 0 0 7px rgba(0, 0, 5, 0.6);
+	box-shadow: inset 0 0 0 7px rgba(0, 0, 5, 0.6), 0 0 1px;
 }
 
 #description .d-image:nth-of-type(2n) {
@@ -507,4 +515,22 @@ a.box-list::before {
 	width: 100%;
 	background: rgba(0, 10, 3, 0.7);
 	position: absolute;
+}
+
+#footer {
+	position: absolute;
+	right: 0;
+	bottom: 0;
+	left: 0;
+	padding: 1rem;
+	background-color: #f1f1f1;
+	font-family: "Merriweather", serif;
+	font-size: .9em;
+	text-align: center;
+	color: #676767;
+}
+
+#footer a {
+	text-decoration: none;
+	color: #668e21;
 }
