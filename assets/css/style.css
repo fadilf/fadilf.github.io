@@ -534,3 +534,11 @@ a.box-list::before {
 	text-decoration: none;
 	color: #668e21;
 }
+
+#makervid {
+	margin: 0 auto;
+	display: block;
+	width: 100%;
+	max-width: 560px;
+	height: 315px;
+}
