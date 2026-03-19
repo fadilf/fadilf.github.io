@@ -6,6 +6,15 @@ import ProjectCardList from './ProjectCard';
 
 const webItems = [
 	{
+		link: "https://github.com/fadilf/gpreview-vscode",
+		title: "GPreview",
+		doneFor: "Personal",
+		timePeriod: [2025, 2026],
+		extract: "Built a LabVIEW-to-HTML preview pipeline and VS Code extension that let users inspect VI files with interactive multi-frame structures outside the LabVIEW IDE.",
+		skills: ["LabVIEW", "TypeScript", "HTML"],
+		image: "/thumbnails/gpreview-demo.webp",
+	},
+	{
 		link: "",
 		title: "Web-Based News Storytelling",
 		doneFor: "Rice Thresher",

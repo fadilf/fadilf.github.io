@@ -23,8 +23,7 @@ function ProjectCard({
     let [greyX, greyY] = [xHalf + (xHalf * Math.cos(angle)), yHalf + (yHalf * Math.sin(angle))];
     let [goldX, goldY] = [2 * xHalf - greyX, 2 * yHalf - greyY]
     return (
-        // <Link className='project-item' href={project.link}>
-        <div className='project-item'>
+        <Link className='project-item' href={project.link}>
             <div className="project-lights">
                 <div className="grey-light" style={{
                     boxShadow: `#4b5563 ${greyX}rem ${greyY}rem 10rem 6rem`
@@ -49,8 +48,7 @@ function ProjectCard({
                 </div>
                 <div className='project-image' style={{ backgroundImage: `url('${project.image}')` }}></div>
             </div>
-            {/* </Link> */}
-        </div>
+        </Link>
     )
 }
 
