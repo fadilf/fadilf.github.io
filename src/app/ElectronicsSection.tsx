@@ -62,13 +62,13 @@ const electronicsItems = [
 ]
 
 export default function ElectronicsSection() {
-	
+
 	let size = 20;
 	let intensity = 6;
 	let [positionX, positionY, positionZ] = [2, 10, 7];
 
 	return (
-		<section id="electronics" className='project-section md:px-10'>
+		<section id="electronics" className='project-section md:px-12'>
 			<div className='section-header'>
 				<div id="lcd-container" className='section-header-3d transition-hidden'>
 					<Canvas camera={{ fov: 27, near: 0.1, far: 1000, position: [0, 0, 20] }}>
@@ -77,7 +77,7 @@ export default function ElectronicsSection() {
 							<rectAreaLight
 								width={size}
 								height={size}
-								color="#9ca3af"
+								color="#86868b"
 								intensity={intensity}
 								position={[-positionX, positionY, positionZ]}
 								castShadow
@@ -85,7 +85,7 @@ export default function ElectronicsSection() {
 							<rectAreaLight
 								width={size}
 								height={size}
-								color="#60a5fa"
+								color="#0071e3"
 								intensity={intensity}
 								position={[positionX, positionY, positionZ]}
 								castShadow
@@ -94,8 +94,8 @@ export default function ElectronicsSection() {
 					</Canvas>
 				</div>
 				<div>
-					<h2 className='text-6xl font-semibold mb-3 text-gray-50'>Electronics</h2>
-					<h3 className='font-semibold mb-3 text-gray-50'>Systems, signals, and solder</h3>
+					<h2 className='text-6xl font-bold mb-3 text-apple-text tracking-tight'>Electronics</h2>
+					<h3 className='font-medium mb-3 text-apple-lightgray text-lg'>Systems, signals, and solder</h3>
 				</div>
 			</div>
 			<div className='project-set'>

@@ -1,15 +1,15 @@
 export default function JigsawSection() {
 
     return (
-        <section className='max-w-7xl mx-auto px-5 py-20 mb-20 md:px-10'>
+        <section className='max-w-5xl mx-auto px-6 py-24 mb-24 md:px-12'>
             <div className='jigsaw-text'>
-                <h2 className='text-5xl font-semibold mb-3 text-gray-50'>How I Got Here</h2>
-                <h3 className='font-semibold mb-3 text-gray-50'>Learning to do 🤝 Doing to learn</h3>
+                <h2 className='text-5xl font-bold mb-4 text-apple-text tracking-tight'>How I Got Here</h2>
+                <h3 className='font-medium mb-4 text-apple-lightgray text-lg'>Learning to do. Doing to learn.</h3>
                 <div className='max-w-2xl'>
-                    <p className='mb-2'>
+                    <p className='mb-3 text-[#a1a1a6] leading-relaxed'>
                         As you&apos;ll see below, I keep busy with projects that are interesting, refine what I know, and throw me into the deep end of something new.
                     </p>
-                    <p>
+                    <p className='text-[#a1a1a6] leading-relaxed'>
                         I started in full stack development by pasting HTML snippets in Blogger, in electronics with Lego robots, and in data science by scraping Spanish tests to study vocab.
                     </p>
                 </div>

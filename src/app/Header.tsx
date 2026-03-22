@@ -18,7 +18,7 @@ export default function Header() {
 \twidth: 28rem;`,
 `\tborder-radius: 0.75rem;`,
 `\ttransform: rotate(3deg);`,
-`\tbackground: center / cover url('/<span id="gallery-files" class="font-bold text-gray-500"></span>');` 
+`\tbackground: center / cover url('/<span id="gallery-files" class="font-bold text-apple-gray"></span>');`
 	];
 	let stylingsArrRepacked: string[] = [];
 
@@ -42,7 +42,7 @@ export default function Header() {
 						veilElem.current!.style.width = "28rem";
 						dottedBg.current!.style.animation = "1400ms ease-in-out 300ms 1 normal forwards running search";
 						dottedBg.current!.style.width = "28rem";
-						dottedBg.current!.style.background = "url('/dotted.svg'), radial-gradient(#2e2f1a, #030712)";
+						dottedBg.current!.style.background = "url('/dotted.svg'), radial-gradient(#2e2f1a, #1d1d1f)";
 						dottedBg.current!.style.backgroundSize = "4.5rem, auto";
 						break;
 					case 2:
@@ -92,8 +92,8 @@ export default function Header() {
 					setTimeout(function(){
 						imgElem.current!.style.opacity = "0";
 					}, 5500)
-					
-					
+
+
 				}
 			});
 		}
@@ -107,12 +107,12 @@ export default function Header() {
 			<div id="header-flex">
 				<div id="header-text">
 					<h1>Hi, I&apos;m&nbsp;<span ref={nameElem}></span></h1>
-					<div className='mt-1 mb-5'>
-						<p className='my-1'>
+					<div className='mt-3 mb-6'>
+						<p className='my-2 text-base leading-relaxed text-[#a1a1a6]'>
 							Developer of things that are novel and practical, physical and digital, at every level of abstraction. Currently working at DMC Inc.
 						</p>
-						<p className='my-1'>
-							You can see my projects below and check out my <a target="_blank" className='font-semibold' href="https://github.com/fadilf/">GitHub</a> and <a target="_blank" className='font-semibold' href="https://www.linkedin.com/in/fadileledath/">LinkedIn</a>.
+						<p className='my-2 text-base leading-relaxed text-[#a1a1a6]'>
+							You can see my projects below and check out my <a target="_blank" className='font-semibold text-apple-blue hover:text-[#0077ed] transition-colors duration-300' href="https://github.com/fadilf/">GitHub</a> and <a target="_blank" className='font-semibold text-apple-blue hover:text-[#0077ed] transition-colors duration-300' href="https://www.linkedin.com/in/fadileledath/">LinkedIn</a>.
 						</p>
 					</div>
 					<div id="code-block">
@@ -122,14 +122,14 @@ export default function Header() {
 					</div>
 				</div>
 				<div id="header-image">
-					<div className='duration-300' ref={imgContainer}>
-						<div ref={dottedBg} className='h-80 w-0 duration-300 -mb-80 relative scale-[2] -rotate-3 shadow-[inset_#030712_0_0_4rem_10rem] -z-10'></div>
-						<div ref={veilElem} className='bg-gray-900 h-80 w-0 duration-300 -mb-80'></div>
-						<div ref={imgElem} className='duration-300 h-0 w-0 bg-center bg-cover opacity-0'></div>
+					<div className='duration-500' ref={imgContainer}>
+						<div ref={dottedBg} className='h-80 w-0 duration-500 -mb-80 relative scale-[2] -rotate-3 shadow-[inset_#1d1d1f_0_0_4rem_10rem] -z-10'></div>
+						<div ref={veilElem} className='bg-apple-card h-80 w-0 duration-500 -mb-80'></div>
+						<div ref={imgElem} className='duration-500 h-0 w-0 bg-center bg-cover opacity-0'></div>
 					</div>
 				</div>
 			</div>
-			<style>{`.typed-cursor.typed-cursor--blink{margin:0 -3.5px}`}</style>
+			<style>{`.typed-cursor.typed-cursor--blink{margin:0 -3.5px; color: #0071e3}`}</style>
         </header>
 	)
 }

@@ -19,7 +19,7 @@ const webItems = [
 		title: "Web-Based News Storytelling",
 		doneFor: "Rice Thresher",
 		timePeriod: [2022, 2023],
-		extract: "Crafted interactive experiences through the medium of the web to convey themes present in stories about Rice’s baseball team, the RMC’s relationship with the historic third ward, and personal stories from alumni about abortion.",
+		extract: "Crafted interactive experiences through the medium of the web to convey themes present in stories about Rice's baseball team, the RMC's relationship with the historic third ward, and personal stories from alumni about abortion.",
 		skills: ["php", "python"],
 		image: "/thumbnails/thresher.png",
 	},
@@ -77,7 +77,7 @@ export default function FullStackSection() {
 	let [positionX, positionY, positionZ] = [2, 10, 7];
 
 	return (
-		<section id="fullstack" className='project-section md:px-10'>
+		<section id="fullstack" className='project-section md:px-12'>
 			<div className='section-header'>
 				<div className='section-header-3d transition-hidden'>
 					<Canvas camera={{ fov: 20, near: 0.1, far: 1000, position: [0, 0, 20] }}>
@@ -86,7 +86,7 @@ export default function FullStackSection() {
 							<rectAreaLight
 								width={size}
 								height={size}
-								color="#9ca3af"
+								color="#86868b"
 								intensity={intensity}
 								position={[-positionX, positionY, positionZ]}
 								castShadow
@@ -94,7 +94,7 @@ export default function FullStackSection() {
 							<rectAreaLight
 								width={size}
 								height={size}
-								color="#60a5fa"
+								color="#0071e3"
 								intensity={intensity}
 								position={[positionX, positionY, positionZ]}
 								castShadow
@@ -103,8 +103,8 @@ export default function FullStackSection() {
 					</Canvas>
 				</div>
 				<div>
-					<h2 className='text-6xl font-semibold mb-3 text-gray-50'>Full Stack Design</h2>
-					<h3 className='font-semibold mb-3 text-gray-50'>Web student becomes the webmaster</h3>
+					<h2 className='text-6xl font-bold mb-3 text-apple-text tracking-tight'>Full Stack Design</h2>
+					<h3 className='font-medium mb-3 text-apple-lightgray text-lg'>Web student becomes the webmaster</h3>
 				</div>
 			</div>
 			<div className='project-set'>

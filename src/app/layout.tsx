@@ -1,13 +1,13 @@
 import './globals.css'
-import { IBM_Plex_Sans } from 'next/font/google'
+import { Inter } from 'next/font/google'
 import NavBar from './NavBar'
 import clsx from 'clsx'
 import Script from 'next/script'
 
 
-const ibmPlex = IBM_Plex_Sans({
+const inter = Inter({
 	subsets: ['latin'],
-	weight: ['100', '400', '500', '600', '700']
+	weight: ['100', '300', '400', '500', '600', '700', '800', '900']
 })
 
 export default function RootLayout({
@@ -35,7 +35,7 @@ export default function RootLayout({
 					`}
 				</Script>
 			</head>
-			<body className={clsx(ibmPlex.className, 'bg-gray-950', 'text-gray-300', 'font-normal', 'overflow-x-hidden')}>
+			<body className={clsx(inter.className, 'bg-apple-black', 'text-apple-lightgray', 'font-normal', 'overflow-x-hidden', 'antialiased')}>
 				<NavBar />
 				<main>
 					{children}
