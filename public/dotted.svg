@@ -2,8 +2,20 @@
 <!-- Generator: Adobe Illustrator 27.5.0, SVG Export Plug-In . SVG Version: 6.00 Build 0)  -->
 <svg version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
 	 viewBox="0 0 1706.7 1706.7" style="enable-background:new 0 0 1706.7 1706.7;" xml:space="preserve">
+<defs>
+	<linearGradient id="frutigerAeroGradient" gradientUnits="userSpaceOnUse" x1="182.6" y1="128.8" x2="1524.1" y2="1577.9">
+		<stop offset="0%" style="stop-color:#CFFFF8"/>
+		<stop offset="24%" style="stop-color:#93F2F1"/>
+		<stop offset="52%" style="stop-color:#58CCF6"/>
+		<stop offset="78%" style="stop-color:#4DA1FF"/>
+		<stop offset="100%" style="stop-color:#79F0CF"/>
+	</linearGradient>
+	<filter id="frutigerAeroGlow" x="-10%" y="-10%" width="120%" height="120%">
+		<feDropShadow dx="0" dy="0" stdDeviation="8" flood-color="#A7FFF0" flood-opacity="0.35"/>
+	</filter>
+</defs>
 <style type="text/css">
-	.st0{fill:#4B5563;}
+	.st0{fill:url(#frutigerAeroGradient);filter:url(#frutigerAeroGlow);}
 </style>
 <g id="Layer_2">
 	<path d="M105.3,75.7c-14,4.7-26.7,18.8-29.6,33.1c-5.7,27.5,21.7,54.9,49.2,49.2c20.7-4.3,36.7-25.3,34.7-45.2

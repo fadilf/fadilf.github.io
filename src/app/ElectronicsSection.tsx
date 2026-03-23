@@ -24,7 +24,7 @@ const electronicsItems = [
 		image: "/thumbnails/hornbill.jpg",
 	},
 	{
-		link: "",
+		link: "https://www.youtube.com/watch?v=mWMPlSx7AGo",
 		title: "Trashberry",
 		doneFor: "Personal",
 		timePeriod: [2016, 2022],
@@ -77,7 +77,7 @@ export default function ElectronicsSection() {
 							<rectAreaLight
 								width={size}
 								height={size}
-								color="#86868b"
+								color="#fffbe6"
 								intensity={intensity}
 								position={[-positionX, positionY, positionZ]}
 								castShadow
@@ -85,7 +85,7 @@ export default function ElectronicsSection() {
 							<rectAreaLight
 								width={size}
 								height={size}
-								color="#0071e3"
+								color="#6be89a"
 								intensity={intensity}
 								position={[positionX, positionY, positionZ]}
 								castShadow

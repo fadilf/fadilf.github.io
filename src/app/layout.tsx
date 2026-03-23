@@ -35,7 +35,7 @@ export default function RootLayout({
 					`}
 				</Script>
 			</head>
-			<body className={clsx(inter.className, 'bg-apple-black', 'text-apple-lightgray', 'font-normal', 'overflow-x-hidden', 'antialiased')}>
+			<body className={clsx(inter.className, 'bg-gradient-to-br', 'from-[#e8f4f8]', 'to-[#d4ecd0]', 'min-h-screen', 'text-apple-lightgray', 'font-normal', 'overflow-x-hidden', 'antialiased')}>
 				<NavBar />
 				<main>
 					{children}

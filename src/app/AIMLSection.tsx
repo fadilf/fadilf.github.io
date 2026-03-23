@@ -33,7 +33,7 @@ const AIMLItems = [
 		image: "/thumbnails/sahl.jpg",
 	},
 	{
-		link: "",
+		link: "https://github.com/fadilf/college/blob/main/EDA.ipynb",
 		title: "IPEDS Data Exploration",
 		doneFor: "Personal",
 		timePeriod: [2023],
@@ -42,7 +42,7 @@ const AIMLItems = [
 		image: "/thumbnails/ipeds.png",
 	},
 	{
-		link: "",
+		link: "https://fadileledath.com/RiceCourseUtilities/",
 		title: "Rice Course Utilities",
 		doneFor: "Personal",
 		timePeriod: [2022],
@@ -68,7 +68,7 @@ export default function AIMLSection() {
 							<rectAreaLight
 								width={size}
 								height={size}
-								color="#86868b"
+								color="#fffbe6"
 								intensity={intensity}
 								position={[-positionX, positionY, positionZ]}
 								castShadow
@@ -76,7 +76,7 @@ export default function AIMLSection() {
 							<rectAreaLight
 								width={size}
 								height={size}
-								color="#0071e3"
+								color="#6be89a"
 								intensity={intensity}
 								position={[positionX, positionY, positionZ]}
 								castShadow

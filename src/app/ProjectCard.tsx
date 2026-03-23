@@ -22,12 +22,12 @@ function ProjectCard({
     let [goldX, goldY] = [2 * xHalf - greyX, 2 * yHalf - greyY]
     return (
         <a className='project-item' href={project.link || undefined} target="_blank" rel="noopener noreferrer">
-            <div className="project-lights">
-                <div className="grey-light" style={{
-                    boxShadow: `#2c2c2e ${greyX}rem ${greyY}rem 10rem 6rem`
+            <div className="project-lights" suppressHydrationWarning>
+                <div className="grey-light" suppressHydrationWarning style={{
+                    boxShadow: `rgba(255, 255, 255, 0.6) ${greyX}rem ${greyY}rem 10rem 6rem`
                 }}></div>
-                <div className="gold-light" style={{
-                    boxShadow: `rgba(0, 113, 227, 0.15) ${goldX}rem ${goldY}rem 16rem 4rem`
+                <div className="gold-light" suppressHydrationWarning style={{
+                    boxShadow: `rgba(46, 158, 79, 0.15) ${goldX}rem ${goldY}rem 16rem 4rem`
                 }}></div>
             </div>
             <div className="project-item-sub">

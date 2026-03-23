@@ -9,16 +9,16 @@ module.exports = {
     extend: {
       colors: {
         apple: {
-          black: '#1d1d1f',
-          darkgray: '#2d2d2d',
-          gray: '#6e6e73',
-          lightgray: '#86868b',
-          text: '#f5f5f7',
-          blue: '#0071e3',
-          bluehover: '#0077ed',
-          card: '#1c1c1e',
-          cardborder: '#38383a',
-          surface: '#2c2c2e',
+          black: '#e8f4f8',
+          darkgray: '#c8ddd0',
+          gray: '#4a7a5a',
+          lightgray: '#4a7a5a',
+          text: '#1a3a2a',
+          blue: '#2e9e4f',
+          bluehover: '#3ab85e',
+          card: 'rgba(255, 255, 255, 0.45)',
+          cardborder: 'rgba(255, 255, 255, 0.6)',
+          surface: 'rgba(255, 255, 255, 0.3)',
         },
       },
       backgroundImage: {
@@ -28,5 +28,5 @@ module.exports = {
       },
     },
   },
-  plugins: [],
+  plugins: [require('@tailwindcss/typography')],
 }

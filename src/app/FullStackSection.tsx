@@ -15,7 +15,7 @@ const webItems = [
 		image: "/thumbnails/gpreview-demo.webp",
 	},
 	{
-		link: "",
+		link: "https://projects.ricethresher.org/projects/baseball",
 		title: "Web-Based News Storytelling",
 		doneFor: "Rice Thresher",
 		timePeriod: [2022, 2023],
@@ -24,7 +24,7 @@ const webItems = [
 		image: "/thumbnails/thresher.png",
 	},
 	{
-		link: "",
+		link: "https://delegatepal.com/",
 		title: "DelegatePal",
 		doneFor: "Personal",
 		timePeriod: [2016, 2018],
@@ -33,7 +33,7 @@ const webItems = [
 		image: "/thumbnails/dp.png",
 	},
 	{
-		link: "",
+		link: "https://github.com/fadilf/jira-work-logger",
 		title: "Jira Work-Logging App",
 		doneFor: "Target RWE",
 		timePeriod: [2022],
@@ -42,7 +42,7 @@ const webItems = [
 		image: "/thumbnails/jira.png",
 	},
 	{
-		link: "",
+		link: "https://github.com/fadilf/dating-app-anachronism",
 		title: "Love Poet Anachronism",
 		doneFor: "ENGL 254",
 		timePeriod: [2023],
@@ -60,7 +60,7 @@ const webItems = [
 		image: "/thumbnails/puzzlehunt.jpg",
 	},
 	{
-		link: "",
+		link: "https://github.com/fadilf/productivity-period",
 		title: "Productivity Period",
 		doneFor: "Hackrice Hackathon",
 		timePeriod: [2019],
@@ -86,7 +86,7 @@ export default function FullStackSection() {
 							<rectAreaLight
 								width={size}
 								height={size}
-								color="#86868b"
+								color="#fffbe6"
 								intensity={intensity}
 								position={[-positionX, positionY, positionZ]}
 								castShadow
@@ -94,7 +94,7 @@ export default function FullStackSection() {
 							<rectAreaLight
 								width={size}
 								height={size}
-								color="#0071e3"
+								color="#4ade80"
 								intensity={intensity}
 								position={[positionX, positionY, positionZ]}
 								castShadow
