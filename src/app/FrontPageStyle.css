@@ -68,14 +68,52 @@
 	inset: -20%;
 	width: auto;
 	height: auto;
-	background-position: center;
-	background-repeat: repeat;
-	background-size: 4.5rem;
 	border-radius: 0;
+	isolation: isolate;
 	transform-origin: center;
 	transform: translate3d(1.2rem, -0.6rem, 0) rotate(-3deg) scale(1.2);
-	box-shadow: inset rgba(223, 237, 219, 0.92) 0 0 5rem 6.5rem;
 	z-index: -1;
+}
+
+.hero-dots::before,
+.hero-dots::after {
+	content: "";
+	position: absolute;
+	opacity: 0.92;
+}
+
+.hero-dots::before {
+	background:
+		url("data:image/svg+xml,%3Csvg viewBox='0 0 120 120' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='noise'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='1.35' numOctaves='4' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='120' height='120' filter='url(%23noise)' opacity='0.58'/%3E%3C/svg%3E"),
+		linear-gradient(135deg, rgba(220, 255, 114, 0.84), rgba(122, 224, 202, 0.74) 48%, rgba(117, 188, 224, 0.78));
+	background-blend-mode: overlay, normal;
+	background-size: 7rem, cover;
+	filter: blur(14px) saturate(1.12);
+	top: 13%;
+	left: 13%;
+	width: 58%;
+	aspect-ratio: 1;
+	transform: rotate(-7deg);
+}
+
+.hero-dots::after {
+	top: -3%;
+	right: -4%;
+	width: 76%;
+	aspect-ratio: 1;
+	background:
+		url("data:image/svg+xml,%3Csvg viewBox='0 0 180 180' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='noise'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='1.2' numOctaves='4' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='180' height='180' filter='url(%23noise)' opacity='0.36'/%3E%3C/svg%3E"),
+		radial-gradient(circle at 62% 34%, rgba(236, 255, 182, 0.9), transparent 28%),
+		radial-gradient(circle at 38% 66%, rgba(143, 230, 207, 0.82), transparent 44%),
+		radial-gradient(circle at 70% 70%, rgba(126, 196, 231, 0.78), transparent 50%),
+		linear-gradient(135deg, rgba(226, 249, 242, 0.95), rgba(169, 229, 218, 0.85));
+	background-blend-mode: overlay, normal, normal, normal, normal;
+	background-position: center;
+	background-size: 7rem, cover, cover, cover, cover;
+	border-radius: 50%;
+	filter: blur(18px) saturate(1.12);
+	mix-blend-mode: multiply;
+	transform: rotate(5deg);
 }
 
 .hero-veil {
@@ -109,11 +147,6 @@
 
 .hero-preview-visible .hero-dots {
 	opacity: 1;
-	background-image: url('/dotted.svg');
-	background-position: center;
-	background-repeat: repeat;
-	background-size: 4.5rem;
-	box-shadow: inset #e3f2ee 0 0 5rem 10rem;
 	animation: search 1400ms ease-in-out 300ms 1 normal forwards;
 }
 
@@ -195,15 +228,15 @@
 
 @keyframes search {
 	0% {
-		box-shadow: inset #e3f2ee 0 0 5rem 10rem;
+		filter: saturate(0.85) contrast(0.95);
 	}
 
 	15% {
-		box-shadow: inset #e3f2ee 0 0 5rem 5.75rem;
+		filter: saturate(1.18) contrast(1.08);
 	}
 
 	100% {
-		box-shadow: inset #e3f2ee 0 0 5rem 6.5rem;
+		filter: saturate(1.08) contrast(1.04);
 	}
 }
 
