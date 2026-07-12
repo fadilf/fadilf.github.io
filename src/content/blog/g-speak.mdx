@@ -19,7 +19,7 @@ effort that could be promising too. In my own testing of some of these tools, th
 they aren't quite at the level of code analysis just yet, and Nigel has only just started getting
 into the code generation side of things.
 
-## What it is
+## Why I built it
 
 I figured that with some of the AI coding experiments I've been doing, I could throw my hat into
 the ring: a little experiment to build a coding agent that can at least understand LabVIEW code,
@@ -39,7 +39,7 @@ agent this kind of visibility, and landed on **pylabview** and **GPreview**, wra
 coding agent I'm calling **g-speak**, built as a fork of [OpenCode](https://opencode.ai) with
 LabVIEW-specific capabilities baked in.
 
-## How to use it
+## Try it yourself
 
 This is an early, informal experiment, so expect rough edges. Download the version for your OS,
 no installation necessary:
@@ -59,7 +59,7 @@ To run it:
   Your browser does not support the video tag.
 </video>
 
-## A few use cases
+## What it can help with
 
 The result is something that lets you explore spaghetti code and understand what's hiding behind
 it. It doesn't let the agent write code, only understand it, but understanding code at a high level
@@ -71,7 +71,7 @@ this failure mode originating from? Where *could* it be originating from?
 
 ![g-speak answering questions about a LabVIEW VI](/blogs/g-speak/example.png)
 
-## How it works
+## Giving agents a way to see VIs
 
 I used Claude to extend pylabview so it had visibility into a broader range of LabVIEW file types,
 then built an agent skill to help the agent understand what those files actually mean once they're
@@ -84,13 +84,11 @@ ability to do a kind of computer-use analysis of a VI without ever opening the L
 environment or clicking through to switch between case structures. It can just see everything at
 once, in a format it already understands.
 
-## What I did to make it
+## What g-speak is made of
 
-These two tools, pylabview and GPreview, combined with a skill that gives the agent general
-grounding in what LabVIEW is and what its various components are, form a set of tools that are, I
-think, well suited to this use case. That combination, an extended pylabview for reading a VI's
-internals, GPreview for seeing it visually, and a grounding skill tying it together, is really the
-whole of what g-speak is right now.
+Right now, g-speak is basically three things working together: an extended pylabview for reading a
+VI's internals, GPreview for seeing the VI visually, and a LabVIEW grounding skill that helps the
+agent connect those representations back to LabVIEW concepts.
 
 I hope you give it a try and let me know what you think. I believe this is a promising methodology
 for getting coding agents to work with LabVIEW, and it could very well be expanded into something
