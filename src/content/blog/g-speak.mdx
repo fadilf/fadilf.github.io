@@ -1,0 +1,99 @@
+---
+title: "g-speak: an AI coding agent for LabVIEW"
+date: "2026-07-12"
+excerpt: "LabVIEW's graphical environment is hard for typical coding agents to work with. I built a small experiment to see how well an agent could understand LabVIEW code, without needing to write it."
+---
+
+![g-speak starting up in a terminal](/blogs/g-speak/start.png)
+
+I use LabVIEW a lot, and its graphical nature has its ups and downs. The upside is that it makes a
+certain kind of system development extremely straightforward and intuitive: state machine
+programming with certain control flows, real-time programming, FPGA programming, and so on. The
+main downside, which has become salient in recent years, is that this graphical environment is
+hard for the usual coding agents to access, both in terms of their training and their code
+generation. Computer use with traditional coding agents has gotten better, but it's still a very
+inefficient way to interact with LabVIEW for agentic purposes.
+
+Luckily, NI has been working on Nigel, which looks promising, and Jake AI from JKI is a parallel
+effort that could be promising too. In my own testing of some of these tools, though, I found that
+they aren't quite at the level of code analysis just yet, and Nigel has only just started getting
+into the code generation side of things.
+
+## What it is
+
+I figured that with some of the AI coding experiments I've been doing, I could throw my hat into
+the ring: a little experiment to build a coding agent that can at least understand LabVIEW code,
+and understand it pretty well.
+
+The real benefit of coding agents, when it comes to understanding codebases, is that they can make
+connections across several orders of leaps of logic. They have an agentic relationship with the
+code, where they can analyze a function, recognize that it's impacted by another function, and take
+the initiative to go read that other function, and so on. That's what makes them so much more
+powerful running directly on our own computers, rather than being question-answer bots accessed
+over the internet on a site like chatgpt.com.
+
+I figured that if there were a way to give a coding agent visibility into the bones of a VI file, it
+would, based on the progress that's already been made with coding agents generally, have the
+ability to do this for LabVIEW too. To that end, I explored various tools that could give a coding
+agent this kind of visibility, and landed on **pylabview** and **GPreview**, wrapped up into a
+coding agent I'm calling **g-speak**, built as a fork of [OpenCode](https://opencode.ai) with
+LabVIEW-specific capabilities baked in.
+
+## How to use it
+
+This is an early, informal experiment, so expect rough edges. Download the version for your OS,
+no installation necessary:
+
+- **Windows:** [g-speak-windows-x64.zip](/downloads/g-speak-windows-x64.zip)
+- **Linux:** [g-speak-linux-x64.tar.gz](/downloads/g-speak-linux-x64.tar.gz)
+
+To run it:
+
+1. Unzip the download anywhere. It's self-contained, nothing to install.
+2. Open a terminal in a folder with some VIs in it (or a whole LabVIEW project).
+3. Run `g-speak.exe` (Windows) or `./g-speak` (Linux). The first time, it'll walk you through
+   connecting an AI provider: OpenAI, Anthropic, whatever you'd normally use.
+4. Ask it about your VIs, in plain English.
+
+<video controls playsInline preload="metadata" src="/blogs/g-speak/demo.mp4" style={{ width: "100%", borderRadius: "0.75rem" }}>
+  Your browser does not support the video tag.
+</video>
+
+## A few use cases
+
+The result is something that lets you explore spaghetti code and understand what's hiding behind
+it. It doesn't let the agent write code, only understand it, but understanding code at a high level
+is powerful on its own.
+
+It's also useful for debugging: part of debugging is figuring out the second and third order
+effects of the various components in your code that could be causing something unexpected. Where is
+this failure mode originating from? Where *could* it be originating from?
+
+![g-speak answering questions about a LabVIEW VI](/blogs/g-speak/example.png)
+
+## How it works
+
+I used Claude to extend pylabview so it had visibility into a broader range of LabVIEW file types,
+then built an agent skill to help the agent understand what those files actually mean once they're
+converted into XML.
+
+After that, I gave the agent GPreview, a tool I'd previously built that converts a VI file into an
+interactive HTML file. Coding agents already understand HTML very well, and can explore an HTML
+document to understand the media inside it, including images. Effectively, this gives the agent the
+ability to do a kind of computer-use analysis of a VI without ever opening the LabVIEW dev
+environment or clicking through to switch between case structures. It can just see everything at
+once, in a format it already understands.
+
+## What I did to make it
+
+These two tools, pylabview and GPreview, combined with a skill that gives the agent general
+grounding in what LabVIEW is and what its various components are, form a set of tools that are, I
+think, well suited to this use case. That combination, an extended pylabview for reading a VI's
+internals, GPreview for seeing it visually, and a grounding skill tying it together, is really the
+whole of what g-speak is right now.
+
+I hope you give it a try and let me know what you think. I believe this is a promising methodology
+for getting coding agents to work with LabVIEW, and it could very well be expanded into something
+that not only reads LabVIEW code, but writes it too.
+
+If you try it and hit something broken or confusing, I'd like to hear about it!
