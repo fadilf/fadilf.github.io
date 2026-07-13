@@ -65,11 +65,31 @@ The result is something that lets you explore spaghetti code and understand what
 it. It doesn't let the agent write code, only understand it, but understanding code at a high level
 is powerful on its own.
 
+<div className="flex flex-col sm:flex-row gap-4">
+  <div className="flex-1 min-w-0">
+    <LightboxImage src="/blogs/g-speak/spaghetti.png" alt="A tangled, undocumented LabVIEW block diagram" className="block w-full h-auto rounded-xl m-0" />
+  </div>
+  <div className="flex-1 min-w-0">
+    <LightboxImage src="/blogs/g-speak/spaghetti-analysis.png" alt="g-speak summarizing the structure and workflow of that same VI" className="block w-full h-auto rounded-xl m-0" />
+  </div>
+</div>
+<p style={{ textAlign: "center", fontStyle: "italic", fontSize: "0.875rem" }}>g-speak turning an undocumented, tangled block diagram into a clear picture of how the VI actually works.</p>
+
 It's also useful for debugging: part of debugging is figuring out the second and third order
 effects of the various components in your code that could be causing something unexpected. Where is
 this failure mode originating from? Where *could* it be originating from?
 
-![g-speak answering questions about a LabVIEW VI](/blogs/g-speak/example.png)
+![g-speak tracing a bug back to a Select node's priority order](/blogs/g-speak/failure-trace.png)
+
+<div className="flex flex-col sm:flex-row gap-4">
+  <div className="flex-1 min-w-0">
+    <LightboxImage src="/blogs/g-speak/qmh.png" alt="A queued message handler VI's front panel and block diagram" className="block w-full h-auto rounded-xl m-0" />
+  </div>
+  <div className="flex-1 min-w-0">
+    <LightboxImage src="/blogs/g-speak/qmh-analysis.png" alt="g-speak explaining the queued message handler's producer/consumer design" className="block w-full h-auto rounded-xl m-0" />
+  </div>
+</div>
+<p style={{ textAlign: "center", fontStyle: "italic", fontSize: "0.875rem" }}>g-speak reading a queued message handler VI and explaining why it's built the way it is.</p>
 
 ## Giving agents a way to see VIs
 

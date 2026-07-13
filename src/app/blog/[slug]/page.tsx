@@ -2,6 +2,7 @@ import Link from 'next/link';
 import { MDXRemote } from 'next-mdx-remote/rsc';
 import { getAllPosts, getPostBySlug } from '@/lib/blog';
 import { notFound } from 'next/navigation';
+import LightboxImage from '../LightboxImage';
 
 export function generateStaticParams() {
   return getAllPosts().map((post) => ({ slug: post.slug }));
@@ -35,7 +36,7 @@ export default async function BlogPostPage({ params }: { params: Promise<{ slug:
           prose-blockquote:border-apple-cardborder prose-blockquote:text-apple-gray
         ">
           {/* @ts-expect-error Async Server Component */}
-          <MDXRemote source={post.content} />
+          <MDXRemote source={post.content} components={{ img: LightboxImage, LightboxImage }} />
         </div>
       </article>
 
