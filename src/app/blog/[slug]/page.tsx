@@ -3,9 +3,14 @@ import { MDXRemote } from 'next-mdx-remote/rsc';
 import { getAllPosts, getPostBySlug } from '@/lib/blog';
 import { notFound } from 'next/navigation';
 import LightboxImage from '../LightboxImage';
+import ExpandableCard from '../ExpandableCard';
 
 export function generateStaticParams() {
   return getAllPosts().map((post) => ({ slug: post.slug }));
+}
+
+function ArticleLink(props: React.AnchorHTMLAttributes<HTMLAnchorElement>) {
+  return <a {...props} target="_blank" rel="noopener noreferrer" />;
 }
 
 export default async function BlogPostPage({ params }: { params: Promise<{ slug: string }> }) {
@@ -36,7 +41,7 @@ export default async function BlogPostPage({ params }: { params: Promise<{ slug:
           prose-blockquote:border-apple-cardborder prose-blockquote:text-apple-gray
         ">
           {/* @ts-expect-error Async Server Component */}
-          <MDXRemote source={post.content} components={{ img: LightboxImage, LightboxImage }} />
+          <MDXRemote source={post.content} components={{ img: LightboxImage, LightboxImage, ExpandableCard, a: ArticleLink }} />
         </div>
       </article>
 

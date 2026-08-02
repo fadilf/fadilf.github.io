@@ -1,0 +1,262 @@
+---
+title: "Learning That History Happens Everywhere... Including at Rice"
+date: "2026-08-02"
+excerpt: "I re-OCR'd 100 years and 78,645 pages of Rice's student newspaper archive with a modern model, then used a coding agent to search it in plain English — turning up forgotten protests, a five-day college presidency, and more."
+---
+
+I often like to think about the history that's right under my nose; the kinds of stories that if
+someone knew them, they'd be bursting to tell me about. It could be something like a fun bit of
+trivia about how the street I'm on earned its name or how the actions of someone I never knew
+about are central to why my life is the way that it is today. Here's one I found out recently: the
+place I grew up in - [Hor al Anz](https://en.wikipedia.org/wiki/Hor_Al_Anz#History) East - was
+named after a sheikh's horse that died in that area and was buried in a sand dune. Weird, right?
+
+While I was at Rice University, I spent some time in the short-lived Special Projects division of
+the campus newspaper - The Rice Thresher. Our specialization was doing web-based storytelling of
+the past and present of Rice. In the course of working there, I got to learn little vignettes
+about the people who were here before me like the stories of [the women who lived through major
+shifts in access to
+abortion](https://projects.ricethresher.org/projects/abortion/a-history-of-abortion-told-through-rice-alumni),
+the history of [gentrification in the surrounding
+community](https://projects.ricethresher.org/projects/innovation/the-data-are-unclear-on-ions-gentrification),
+and the fact that [in 2003 we won the National College Baseball
+Championship](https://projects.ricethresher.org/projects/baseball).
+
+It made me internalize the reality that there is a rich history to be understood about Rice,
+though the four-year nature of undergraduate learning makes institutional memory hard to maintain.
+I got into the habit then of occasionally wondering how students in the past reacted to major
+historical events to get a sense of perspective about my place in history. I would often search
+through an online archive of the Thresher, but I ran into an issue where the OCR model used on the
+paper was fairly out of date, making it unlikely that many of my searches yielded accurate
+results. It made that century-long archive of the past feel impenetrable.
+
+Fast forward a few years and suddenly AI models in many domains have gotten really good. A few
+months ago, I did some digging and found a state-of-the-art OCR model from Nvidia that was perfect
+for extracting text from newspapers and similar documents. I also found a service that gave access
+to GPUs in their downtime, so they cost 1/10th the price to rent. In a fit of inspiration, I
+downloaded the full archive of the Thresher as well as the annual yearbook - the Campanile - and
+transcribed them with this model for the full ~100 year history spanning 78,645 pages.
+
+Once I had this much more searchable corpus of information, I started digging into it. I was able
+to ask an agent like Codex or Claude Code to tell me about how students reacted to WWI and it
+would respond by searching for keywords like "war", "soldier", "army", etc. in issues of the
+Thresher and Campanile from the 1910s. It would identify the issues that were most relevant, read
+them to understand the sentiment reflected in them, and then synthesize that information in a way
+that I could explore further on my own. Here is an example of a question I posed and the final
+response it synthesized:
+
+<ExpandableCard>
+
+**Prompt:**
+
+> Explore the OCR data for the Thresher and Campanile to identify examples of the Rice community
+> reacting to the events of WWI
+
+**Final response:** *(edited to link to the official collection)*
+
+> Rice students' public reaction was overwhelmingly patriotic, but not uncomplicated: they treated
+> the war as a duty, celebrated service, and felt the disruption deeply.
+>
+> - Mobilization was welcomed as a campus cause. In September 1917, each mention of military
+>   training reportedly drew "wild applause"; the student paper wrote that, because the country
+>   was at war, students had "no choice but to work." [Thresher, Sept. 29, 1917
+>   p. 1](https://digitalcollections.rice.edu/Documents/Detail/the-thresher-houston-tex.-vol.-3-no.-1-ed.-1-saturday-september-29-1917/15765?item=24744)
+>   and
+>   [p. 2](https://digitalcollections.rice.edu/Documents/Detail/the-thresher-houston-tex.-vol.-3-no.-1-ed.-1-saturday-september-29-1917/15765?item=24747)
+> - Students accepted a heavily militarized daily life: ROTC/SATC drill, guard duty, and academic
+>   work. Women's compulsory military training initially produced some self-conscious laughter,
+>   but the paper urged them to treat it seriously; the yearbook later said military drill
+>   replaced women's hiking club because there was no time left to hike. [Thresher, Sept. 29, 1917
+>   p. 2](https://digitalcollections.rice.edu/Documents/Detail/the-thresher-houston-tex.-vol.-3-no.-1-ed.-1-saturday-september-29-1917/15765?item=24747)
+>   and [Campanile 1919
+>   p. 165](https://digitalcollections.rice.edu/Documents/Detail/the-campanile-1919/91777?item=93136)
+> - Service and sacrifice became a point of collective pride. The 1919 *Campanile* counted 400
+>   stars on Rice's student service flag, excluding the several hundred SATC members, and
+>   described a continuing stream of volunteers. It framed their record as "glorious." [Campanile
+>   1919
+>   p. 127](https://digitalcollections.rice.edu/Documents/Detail/the-campanile-1919/91777?item=92977)
+> - Those who remained felt conflicted—not relieved. The yearbook says some believed they had been
+>   "cheated" of the chance to serve; it insists they were eager to go and envied those who had
+>   left. That is likely polished postwar rhetoric, but it is strong evidence of the campus ideal
+>   of service. [Campanile 1919
+>   p. 133](https://digitalcollections.rice.edu/Documents/Detail/the-campanile-1919/91777?item=92999)
+> - The war disrupted ordinary college life. Sports schedules were curtailed, student and faculty
+>   departures were conspicuous, and drill competed with classes. Yet the publications often
+>   converted disruption into a story of discipline and morale. [Thresher, May 4, 1917
+>   p. 1](https://digitalcollections.rice.edu/Documents/Detail/the-thresher-houston-tex.-vol.-2-no.-14-ed.-1-friday-may-4-1917/20317?item=40945)
+>   and Campanile 1919 pp.
+>   [131](https://digitalcollections.rice.edu/Documents/Detail/the-campanile-1919/91777?item=92994),
+>   [145](https://digitalcollections.rice.edu/Documents/Detail/the-campanile-1919/91777?item=93047)
+> - After the Armistice, the mood combined relief, pride, and commemoration. Students celebrated
+>   returning service members and later memorialized Rice's dead in a reunion toast; the first
+>   postwar final ball was described as especially enjoyable. Campanile 1920 pp.
+>   [124](https://digitalcollections.rice.edu/Documents/Detail/the-campanile-1920/91778?item=92954)
+>   and [p. 127](https://digitalcollections.rice.edu/Documents/Detail/the-campanile-1920/91778?item=92964)
+>
+> One caveat: these are student publications, so they capture the official/public campus voice
+> rather than private dissent. I found little published antiwar sentiment; the earliest
+> *Campanile* material does preserve a 1916 commencement address calling war a "great wrong," but
+> once the U.S. entered, the student press became emphatically pro-service.
+
+</ExpandableCard>
+
+Based on the responses it provided to my various questions, I probed the pages it identified as
+containing relevant material to get a fuller picture of things and to ensure that an OCR mistake
+wouldn't translate into a misunderstanding of the original text. I've got instructions for you to
+be able to explore the archive on your own, but I can give you a sampling below of some of the
+topics I was curious about and decided to explore.
+
+When the COVID pandemic hit, it felt like the sort of thing that you would only have heard about
+happening in the past. Of course, the Spanish flu had taken place about a century prior, and Rice
+had been around during that time. Looking at the re-scanned archive, I found an echo of a feeling
+many had during the more recent pandemic. I remember stifling every minor cough or sneeze for fear
+of arousing suspicion that I was infected. Some developed hypochondriac tendencies that lasted
+beyond COVID. I found this gem embedded in a 1919 issue of the Thresher that parodied a similar
+paranoia from a different era:
+
+<LightboxImage src="/blogs/thresher/spanish-flu-parody.png" alt="A parody item from a 1919 issue of the Thresher poking fun at flu paranoia" className="block w-[30%] h-auto rounded-xl mx-auto" />
+<p className="not-prose text-center text-xs italic text-apple-lightgray/70 mt-2 mb-8 [&_a]:text-apple-lightgray/80 [&_a]:no-underline [&_a]:border-b [&_a]:border-apple-lightgray/30 [&_a]:pb-0.5 [&_a]:hover:text-apple-text [&_a]:hover:border-apple-text/50">[Thresher, Oct. 23, 1919 p. 4](https://digitalcollections.rice.edu/Documents/Detail/the-thresher-houston-tex.-vol.-5-no.-5-ed.-1-thursday-october-23-1919/21710?item=45873)</p>
+
+In other searches, I learned that the namesake of the Heisman Trophy - John Heisman - was once a
+coach at Rice. He had just come off a string of successful coaching gigs at other college football
+programs, and he came to Rice with the intention of invigorating their football program. He wrote
+several letters to the student body in which he laid out an affirmative vision for the changes he
+wanted to bring to Rice's athletic program. In one of these letters, he effectively scolds the
+Rice community for their lack of school spirit around athletics and their under-appreciation of
+the student athletes. I don't think much has changed since 1924 in that regard.
+
+<LightboxImage src="/blogs/thresher/heisman.jpg" alt="A letter from coach John Heisman scolding Rice students for their lack of school spirit" className="block w-full h-auto rounded-xl" />
+<p className="not-prose text-center text-xs italic text-apple-lightgray/70 mt-2 mb-8 [&_a]:text-apple-lightgray/80 [&_a]:no-underline [&_a]:border-b [&_a]:border-apple-lightgray/30 [&_a]:pb-0.5 [&_a]:hover:text-apple-text [&_a]:hover:border-apple-text/50">[Thresher, April 18, 1924 p. 4](https://digitalcollections.rice.edu/Documents/Detail/the-thresher-houston-tex.-vol.-9-no.-26-ed.-1-friday-april-18-1924/16424?item=27311)</p>
+
+He spent four years at Rice, only to end up with a record that he and others would regard as
+unsuccessful. Heisman would not go on to coach another college football program.
+
+Another thing that hasn't changed? Students complaining about campus food. An opinion piece
+published in 1918 decried the "evils" present in the food system at Rice, which led to two "food
+riots." Reading the piece makes it clear that they definitely had it worse back then. A 1922 piece
+argued for reforms to combat inflexible meal times, and a 1968 piece complained that the food
+quality had reached "new realms of inedibility." Students also seemingly have a rich tradition of
+complaining about parking.
+
+<div className="flex flex-col sm:flex-row gap-4">
+  <div className="flex-1 min-w-0">
+    <LightboxImage src="/blogs/thresher/food-riot-1918.png" alt="A 1918 opinion piece decrying the 'evils' of Rice's food system and two resulting food riots" className="block w-full h-auto rounded-xl m-0" />
+  </div>
+  <div className="flex-1 min-w-0">
+    <LightboxImage src="/blogs/thresher/food-quality-1968.png" alt="A 1968 piece complaining that campus food quality had reached new realms of inedibility" className="block w-full h-auto rounded-xl m-0" />
+  </div>
+</div>
+<p className="not-prose text-center text-xs italic text-apple-lightgray/70 mt-2 mb-8 [&_a]:text-apple-lightgray/80 [&_a]:no-underline [&_a]:border-b [&_a]:border-apple-lightgray/30 [&_a]:pb-0.5 [&_a]:hover:text-apple-text [&_a]:hover:border-apple-text/50">[Thresher, May 25, 1918 p. 2](https://digitalcollections.rice.edu/Documents/Detail/the-thresher-houston-tex.-vol.-3-no.-14-ed.-1-saturday-may-25-1918/19483?item=38121) | [Thresher, Feb. 29, 1968 p. 2](https://digitalcollections.rice.edu/Documents/Detail/the-rice-thresher-houston-tex.-vol.-55-no.-19-ed.-1-thursday-february-29-1968/13576?item=13640)</p>
+
+<LightboxImage src="/blogs/thresher/meal-times-1922.png" alt="A 1922 piece arguing for reforms to Rice's inflexible meal times" className="block w-[30%] h-auto rounded-xl mx-auto" />
+<p className="not-prose text-center text-xs italic text-apple-lightgray/70 mt-2 mb-8 [&_a]:text-apple-lightgray/80 [&_a]:no-underline [&_a]:border-b [&_a]:border-apple-lightgray/30 [&_a]:pb-0.5 [&_a]:hover:text-apple-text [&_a]:hover:border-apple-text/50">[Thresher, Nov. 3, 1922 p. 2](https://digitalcollections.rice.edu/Documents/Detail/the-thresher-houston-tex.-vol.-8-no.-8-ed.-1-friday-november-3-1922/14739?item=19676)</p>
+
+For all the protests Rice students have had against the quality of food and other features of the
+campus, perhaps the most spectacular example is the Masterson crisis of 1969. When the students
+and faculty learned that the Board of Trustees appointed a new president - William H. Masterson -
+without their involvement, they protested so intensely that Masterson ended up resigning five days
+after his appointment was announced. There's a great video by Melissa Kean that goes over what
+happened:
+
+<div className="aspect-video rounded-xl overflow-hidden">
+  <iframe src="https://www.youtube.com/embed/2c3ULZg-bOs" title="The Masterson Crisis" className="w-full h-full border-0" allowFullScreen />
+</div>
+
+<LightboxImage src="/blogs/thresher/masterson.png" alt="Front page Thresher coverage of the Masterson crisis" className="block w-full h-auto rounded-xl" />
+<p className="not-prose text-center text-xs italic text-apple-lightgray/70 mt-2 mb-8 [&_a]:text-apple-lightgray/80 [&_a]:no-underline [&_a]:border-b [&_a]:border-apple-lightgray/30 [&_a]:pb-0.5 [&_a]:hover:text-apple-text [&_a]:hover:border-apple-text/50">[Thresher, Feb. 28, 1969 p. 1](https://digitalcollections.rice.edu/Documents/Detail/the-rice-thresher-houston-tex.-vol.-56-no.-22-ed.-1-friday-february-28-1969/17998?item=32837)</p>
+
+The Thresher called it "one of the most significant episodes in the history of the University,"
+which is probably true, and yet I think most students would be surprised to hear that such an
+episode ever happened. They'd be more familiar with the Civil Rights Movement that had taken place
+in parallel, a movement that made its most indelible mark on Rice in the form of the decision to
+begin allowing Black students to attend in 1963/64.
+
+Research from Rice's Task Force on Slavery, Segregation and Racial Injustice highlighted that the
+push to desegregate was ["a decision spurred mainly by financial and aspirational motives rather
+than a commitment to advancing civil
+rights."](https://news.rice.edu/news/2020/legal-battle-over-desegregating-rice-gives-context-historic-decision)
+According to a 1961 poll, the students and faculty were generally in favor of desegregation,
+though a decent chunk of them were not, which is unsurprising considering the politics of the era.
+A consequence of Rice breaking with the mandate of its charter to only admit white students was
+that it would also no longer be tuition-free, which may have influenced how this vote went.
+
+<div className="flex flex-col sm:flex-row gap-4">
+  <div className="flex-1 min-w-0">
+    <LightboxImage src="/blogs/thresher/desegregation-poll.png" alt="A 1962 Thresher poll on student and faculty attitudes toward desegregation" className="block w-full h-auto rounded-xl m-0" />
+  </div>
+  <div className="flex-1 min-w-0">
+    <LightboxImage src="/blogs/thresher/desegregation-article.png" alt="A 1962 Thresher article on the poll and implications of desegregation" className="block w-full h-auto rounded-xl m-0" />
+  </div>
+</div>
+<p className="not-prose text-center text-xs italic text-apple-lightgray/70 mt-2 mb-8 [&_a]:text-apple-lightgray/80 [&_a]:no-underline [&_a]:border-b [&_a]:border-apple-lightgray/30 [&_a]:pb-0.5 [&_a]:hover:text-apple-text [&_a]:hover:border-apple-text/50">[Thresher, Jan. 10, 1962 p. 1](https://digitalcollections.rice.edu/Documents/Detail/the-rice-thresher-houston-tex.-vol.-49-no.-14-ed.-1-wednesday-january-10-1962/18280?item=33947) | [Thresher, Jan. 10, 1962 p. 2](https://digitalcollections.rice.edu/Documents/Detail/the-rice-thresher-houston-tex.-vol.-49-no.-14-ed.-1-wednesday-january-10-1962/18280?item=33946)</p>
+
+In searching through this archive, I found some moments of Rice's history that were especially
+unsavory. An example of this was a series of minstrel shows held at Hanszen College in the early
+'60s, the descriptions of which are themselves shock-inducing. I haven't included the worst of it
+here.
+
+<div className="flex flex-col sm:flex-row gap-4">
+  <div className="flex-1 min-w-0">
+    <LightboxImage src="/blogs/thresher/minstrel-1962.png" alt="1962 Campanile coverage of a minstrel show at Hanszen College" className="block w-full h-auto rounded-xl m-0" />
+  </div>
+  <div className="flex-1 min-w-0">
+    <LightboxImage src="/blogs/thresher/minstrel-1966.png" alt="1966 Campanile coverage of a minstrel show at Hanszen College" className="block w-full h-auto rounded-xl m-0" />
+  </div>
+</div>
+<p className="not-prose text-center text-xs italic text-apple-lightgray/70 mt-2 mb-8 [&_a]:text-apple-lightgray/80 [&_a]:no-underline [&_a]:border-b [&_a]:border-apple-lightgray/30 [&_a]:pb-0.5 [&_a]:hover:text-apple-text [&_a]:hover:border-apple-text/50">[1962 Campanile p. 259](https://digitalcollections.rice.edu/Documents/Detail/the-campanile-1962/91821?item=116437) | [1966 Campanile p. 41](https://digitalcollections.rice.edu/Documents/Detail/the-campanile-1966/91825?item=100860)</p>
+
+However, one thing that became clear as I continued exploring was that Rice has never been a
+monolith. Some students at the time took offense to the display, and one in particular (the
+then-president of ACCORD) wrote an opinion that dressed down the performance, albeit in language
+that's now dated. Here we also see a recurrence of a pattern for college campuses that might be
+familiar to us today: there was a backlash to the backlash in the form of an opinion from a
+professor disagreeing with the show but arguing that their right to free speech should enable them
+to perform it.
+
+<LightboxImage src="/blogs/thresher/accord-response.png" alt="An opinion piece from the then-president of ACCORD criticizing the minstrel show" className="block w-full h-auto rounded-xl" />
+<p className="not-prose text-center text-xs italic text-apple-lightgray/70 mt-2 mb-8 [&_a]:text-apple-lightgray/80 [&_a]:no-underline [&_a]:border-b [&_a]:border-apple-lightgray/30 [&_a]:pb-0.5 [&_a]:hover:text-apple-text [&_a]:hover:border-apple-text/50">[Thresher, Dec. 3, 1964 p. 3](https://digitalcollections.rice.edu/Documents/Detail/the-rice-thresher-houston-tex.-vol.-52-no.-11-ed.-1-thursday-december-3-1964/18745?item=35446)</p>
+
+<div className="flex flex-col sm:flex-row gap-4">
+  <div className="flex-1 min-w-0">
+    <LightboxImage src="/blogs/thresher/backlash-1.png" alt="A professor's response defending free speech in the wake of the ACCORD criticism" className="block w-full h-auto rounded-xl m-0" />
+  </div>
+  <div className="flex-1 min-w-0">
+    <LightboxImage src="/blogs/thresher/backlash-2.png" alt="Continuation of the professor's response defending free speech" className="block w-full h-auto rounded-xl m-0" />
+  </div>
+</div>
+<p className="not-prose text-center text-xs italic text-apple-lightgray/70 mt-2 mb-8 [&_a]:text-apple-lightgray/80 [&_a]:no-underline [&_a]:border-b [&_a]:border-apple-lightgray/30 [&_a]:pb-0.5 [&_a]:hover:text-apple-text [&_a]:hover:border-apple-text/50">[Thresher, Dec. 10, 1964 p. 10](https://digitalcollections.rice.edu/Documents/Detail/the-rice-thresher-houston-tex.-vol.-52-no.-12-ed.-1-thursday-december-10-1964/20837?item=43068)</p>
+
+There's so much more to explore in this archive, and I've omitted many details for clarity and
+brevity, but it's been a fascinating experience searching through it in natural language and
+diving deep into topics to get a sense of what life was once like for a student like me before my
+time.
+
+If you do decide to dive into it like I did, it's important to keep in mind what we're looking at.
+This archive is a time capsule, not a time machine: it's a record kept by people whose job was to
+edit it in the process of preserving it. Occasionally you will see the explicit hand of the
+editor, but even if it doesn't present itself that way, it's always there. It's also a record made
+for the contemporary members of the Rice community, so the articles may gesture to an atmosphere
+or context that the intended audience may be familiar with, but you will have to explore further
+to understand that context.
+
+I highly recommend checking out the collection of Thresher and Campanile editions, along with many
+other records of history relating to Rice, over at the Woodson Research Center's Digital
+Collections [official website](https://digitalcollections.rice.edu/). The archivists there have
+done excellent work to compile these resources and publish them. They've also done the work to
+showcase the kinds of stories of the Houston community that are too often untold, like in the case
+of the reports from the [Task Force on Slavery, Segregation, and Racial
+Injustice](https://digitalcollections.rice.edu/task-force-on-slavery-segregation-and-racial-injustice).
+
+You can also read more stories collected by Rice's former Centennial Historian Melissa Kean at her
+blog [Rice History Corner](https://ricehistorycorner.com/). I recommend her blogs about the time
+that [A&M kidnapped Sammy the
+Owl](https://ricehistorycorner.com/2014/04/24/the-kidnapping-of-sammy-1917/), or her writings
+about the cast of characters who have been involved with Rice, which tell a deeper story about
+their contributions to the university.
+
+If you're more technically oriented, you can also explore the archive in the way that I initially
+did from the OCR data I collected. I've published the portion of the archive that is in the public
+domain here: [github.com/fadilf/rice-student-publications-ocr](https://github.com/fadilf/rice-student-publications-ocr).
+You can either clone it from GitHub or paste the link into an online agent chat like Claude or
+ChatGPT and ask it to explore the repository to answer your questions. You might be surprised by
+what you discover. If you find anything interesting, please let me know!
