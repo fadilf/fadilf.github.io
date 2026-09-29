@@ -15,6 +15,15 @@ const AIMLItems = [
 		image: "/blogs/g-speak/start.png",
 	},
 	{
+		link: "https://github.com/fadilf/rice-student-publications-ocr",
+		title: "Rice Archives OCR",
+		doneFor: "Personal",
+		timePeriod: [2026],
+		extract: "I was fascinated with tidbits of info I found in Rice's student publications and wanted to search them easily, so I built a cloud OCR pipeline with Salad + Nemotron Parse v1.2 to process over a century of publications.",
+		skills: ["python", "cloud"],
+		image: "/blogs/thresher/food-riot-1918.png",
+	},
+	{
 		link: "https://github.com/fadilf/sky-sight",
 		title: "Sky Sight",
 		doneFor: "Personal",
