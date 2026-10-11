@@ -73,7 +73,7 @@ const AIMLItems = [
 		title: "WebTDMS",
 		doneFor: "DMC, Inc.",
 		timePeriod: [2024],
-		extract: "An AI code-completion tool for LabVIEW that works by building a Markov chain model from a training set of files converted into graphs and then predicting the next block a user will use based on the last block used.",
+		extract: "A browser-based viewer for TDMS and CSV test and measurement files that requires no installation. It supports waveform charts, side-by-side raw data views with filtering and CSV export, a paginated profiler with per-column distributions, channel property inspection, and calculated channels built with LabVIEW-style logic blocks.",
 		skills: ["python"],
 		image: "/thumbnails/webtdms.png",
 	},
