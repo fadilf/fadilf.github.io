@@ -55,7 +55,7 @@ const AIMLItems = [
 		title: "QuizHP",
 		doneFor: "Personal",
 		timePeriod: [2025],
-		extract: "An MCP server that transforms quiz questions into 125+ interactive canvas-based mini-games. Works with Claude and ChatGPT to gamify learning with activities like archery, bomb defusal, and potion mixing.",
+		extract: "An MCP server that transforms quiz questions into 125+ interactive canvas-based mini-games. Works with Claude and ChatGPT to gamify learning with activities like archery, piano keys, and potion mixing.",
 		skills: ["javascript", "python"],
 		image: "/thumbnails/quizhp.png",
 	},
@@ -87,15 +87,6 @@ const AIMLItems = [
 		image: "/thumbnails/bill.png",
 	},
 	{
-		link: "",
-		title: "Loan Default Prediction",
-		doneFor: "SA Home Loans",
-		timePeriod: [2020],
-		extract: "I improved payment-method opt-out prediction for government worker home loan applicants in South Africa by analyzing data from 20,000 applicants with a veriety of models.",
-		skills: ["php", "python"],
-		image: "/thumbnails/sahl.jpg",
-	},
-	{
 		link: "https://github.com/fadilf/college/blob/main/EDA.ipynb",
 		title: "IPEDS Data Exploration",
 		doneFor: "Personal",
@@ -112,6 +103,15 @@ const AIMLItems = [
 		extract: "Frustrated by Rice's slow and simple course catalog, I wrote a scraper, 2 powerful course browsers, and a tool to export course information from Rice's platform to your calendar.",
 		skills: ["php", "python"],
 		image: "/thumbnails/courseutils.png",
+	},
+	{
+		link: "",
+		title: "Loan Default Prediction",
+		doneFor: "SA Home Loans",
+		timePeriod: [2020],
+		extract: "I improved payment-method opt-out prediction for government worker home loan applicants in South Africa by analyzing data from 20,000 applicants with a veriety of models.",
+		skills: ["php", "python"],
+		image: "/thumbnails/sahl.jpg",
 	},
 ]
 
