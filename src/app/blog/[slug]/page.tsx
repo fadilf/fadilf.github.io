@@ -29,16 +29,16 @@ export default async function BlogPostPage({ params }: { params: Promise<{ slug:
         <time className="text-sm text-apple-lightgray">{formatDate(post.date)}</time>
         <h1 className="text-4xl font-bold text-apple-text mt-2 mb-8">{post.title}</h1>
 
-        <div className="prose prose-invert max-w-none
+        <div className="prose prose-md prose-invert max-w-none leading-relaxed
           prose-headings:text-apple-text
-          prose-p:text-apple-lightgray
+          prose-p:text-apple-text
           prose-a:text-apple-blue prose-a:no-underline hover:prose-a:underline
           prose-strong:text-apple-text
           prose-code:text-apple-text prose-code:bg-apple-surface prose-code:px-1.5 prose-code:py-0.5 prose-code:rounded
           prose-pre:bg-apple-card prose-pre:border prose-pre:border-apple-cardborder
-          prose-li:text-apple-lightgray
-          prose-ul:text-apple-lightgray
-          prose-blockquote:border-apple-cardborder prose-blockquote:text-apple-gray
+          prose-li:text-apple-text
+          prose-ul:text-apple-text
+          prose-blockquote:border-apple-cardborder prose-blockquote:text-apple-text
         ">
           {/* @ts-expect-error Async Server Component */}
           <MDXRemote source={post.content} components={{ img: LightboxImage, LightboxImage, ExpandableCard, a: ArticleLink }} />
