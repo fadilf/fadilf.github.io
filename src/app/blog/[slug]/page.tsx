@@ -2,6 +2,7 @@ import Link from 'next/link';
 import { MDXRemote } from 'next-mdx-remote/rsc';
 import { getAllPosts, getPostBySlug } from '@/lib/blog';
 import { notFound } from 'next/navigation';
+import rehypePrettyCode from 'rehype-pretty-code';
 import LightboxImage from '../LightboxImage';
 import ExpandableCard from '../ExpandableCard';
 
@@ -34,14 +35,23 @@ export default async function BlogPostPage({ params }: { params: Promise<{ slug:
           prose-p:text-apple-text
           prose-a:text-apple-blue prose-a:no-underline hover:prose-a:underline
           prose-strong:text-apple-text
-          prose-code:text-apple-text prose-code:bg-apple-surface prose-code:px-1.5 prose-code:py-0.5 prose-code:rounded
+          prose-code:before:content-none prose-code:after:content-none
+          [&_:not(pre)>code]:text-apple-text [&_:not(pre)>code]:bg-apple-surface [&_:not(pre)>code]:px-1.5 [&_:not(pre)>code]:py-0.5 [&_:not(pre)>code]:rounded
           prose-pre:bg-apple-card prose-pre:border prose-pre:border-apple-cardborder
           prose-li:text-apple-text
           prose-ul:text-apple-text
           prose-blockquote:border-apple-cardborder prose-blockquote:text-apple-text
         ">
           {/* @ts-expect-error Async Server Component */}
-          <MDXRemote source={post.content} components={{ img: LightboxImage, LightboxImage, ExpandableCard, a: ArticleLink }} />
+          <MDXRemote
+            source={post.content}
+            components={{ img: LightboxImage, LightboxImage, ExpandableCard, a: ArticleLink }}
+            options={{
+              mdxOptions: {
+                rehypePlugins: [[rehypePrettyCode, { theme: 'github-light', keepBackground: false }]],
+              },
+            }}
+          />
         </div>
       </article>
 
