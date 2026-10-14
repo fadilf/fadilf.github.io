@@ -1,0 +1,103 @@
+---
+title: "The Data Must Flow: New Form Factors For Programming"
+date: "2026-10-13"
+excerpt: "What would dataflow programming look like if it were designed for text, and for AI?"
+---
+
+Programming in the field of automation lives under a set of constraints that look different from programming outside of it. In all my years of coding, I've seen both sides of things and it's been a never-ending source of intrigue that these two parallel paths of programming coexist, but don't share all that much in common with each other.
+
+I've been writing code in one form or another for over a decade. I started writing code when I was in middle school, though it depends on your definition of writing and your definition of code. I either started with a school class to play around with Lego Mindstorms using NXT-G or with pasting HTML snippets into a Blogspot page. I'm not entirely sure. I just remember being inspired by that [code.org video](https://www.youtube.com/watch?v=nKIu9yen5nc) and from then on identifying as a coder.
+
+Around that time, I also started playing around with Python on the Raspberry Pi, and eventually started using C to write some robotics applications and PHP and JavaScript to write some web applications. I learned about the LAMP stack as this hot new thing in web development, which I used to create an integrated system with a web front end for my robot back end. It was a crazy complicated system and probably overdone, but I had a lot of fun building it and thinking in systems. This was around 2014 to 2016, and I continued to hone my web skills in college on random projects.
+
+<LightboxImage src="/blogs/the-data-must-flow/WRO%202016%20Programming%20Poster.jpg" alt="The Trashberries Inc. WRO 2016 poster, a flowchart of a vending machine and a sorting machine running Python on Raspberry Pis, with a PHP server between them" className="block w-full h-auto rounded-xl" />
+
+*This was the architecture I used to give a robot a front end for my 2016 project. The server was just a laptop with Ubuntu kept inside the robot with its lid open.*
+
+When I graduated from Rice in 2023, I joined [DMC](https://www.dmcinfo.com/blog/author/fadile/), and I still remember the ladder logic interview I gave when applying. I ended up joining the Test & Measurement side of the company, but I've been using dataflow in the form of LabVIEW as a regular go-to alongside other popular choices for programming like Python and C ever since.
+
+It's interesting to see how the metaphor of wires and functional blocks has survived, and perhaps even thrived, despite the ecosystem that has been built around text-based languages. It's hard to say why for sure, but I think that metaphor lends itself to highly opinionated and highly idiomatic programming among developers who don't want to care about the specific details of concurrency and memory management, but who do programming that is deeply affected by them. The fact that engineers, often mechanical and electrical engineers, have stuck with ladder logic for PLCs when microcontrollers exist is a testament to the syntactic and mental clarity it affords.
+
+The main threat to all of that now seems to be AI. In this new paradigm of coding agents, dataflow programming has lost some of its aura. I think the reason dataflow has had a harder time adapting to this paradigm is not that the engineers who've developed it are incapable of adapting it. I know for a fact that they're very talented. The issue is rather that we had no idea the transformer architecture behind these AI models would be so incredible in the text domain, and we had no reason to design the infrastructure around graphical programming with that in mind.
+
+What would it look like to make that evolution? Is it even worth it? Why not give in to text? The future is hard to see, but it's worth trying to take a peek. This past weekend, I spent some time marinating on what that next generation of dataflow would look like: one that is not just conducive to AI generation, but hypothetically, maybe even better suited to it than other languages. I'm going to be breaking down my thoughts over the coming days, but suffice it to say, I'm pretty excited for what might come next.
+
+I brainstormed this with an AI agent, but I didn't want it to design the language for me. I laid out the constraining ideas and groundwork and used the agent to forecast the second- and third-order effects of each decision to help me pick wisely and land on a concept for an initial spec.
+
+My first thought was: what would dataflow look like if it were ideally represented in text? In the past, people have done it through JSON representations. This makes sense. Dataflow languages are often just directed acyclic graphs, and a common representation for them is the kind of flexible mapping JSON affords us.
+
+But what if you could take advantage of the training data that is already available in spades inside the weights of AI models, especially with respect to programming? Perhaps Python is a language to model, but what would Python look like if it were a dataflow language? Well, you'd have certain requirements around dependencies, and you'd have certain restrictions around order of execution.
+
+Ultimately, you'd be treating indentation as a form of diagram scoping. The lines would still read top to bottom like Python, but what runs when would be decided by the wires, not the line numbers. In fact, the word "script" would be incorrect. This would be more akin to a hardware description language like Verilog.
+
+A few rules fall out of these initial ideas:
+
+- Every operation is a call with keyword arguments. `add(x=a, y=b)` is one block with two labeled inputs.
+- No unnamed literals in calls. `0.9` becomes `DECAY = 0.9`, because on the diagram it's a constant block.
+- Nothing is reassigned. State that changes between iterations goes through explicit shift registers (`with` / `next`).
+- Where an input or output sits sets its timing. A stop button declared inside a loop is read every iteration, and an output inside a loop is a live chart.
+- `_` means "no wire." A half-finished diagram can still be saved as text.
+
+Here's a little sample of what that looks like. Note how every operation can correspond to a block.
+
+```python
+A = 3
+B = 4
+total = add(x=A, y=B)
+output total = total
+```
+
+Structures can look clean and Pythonic with these constraints while still being conducive to block representation:
+
+```python
+N = 5
+ZERO = 0
+for iterations(N) with(acc=ZERO):
+    acc_next = add(x=acc, y=index)
+    next(acc=acc_next) out(total=acc_next)
+output total = total
+```
+
+`for iterations(N)` runs the body `N` times, and `index` counts the iterations. `with(acc=ZERO)` sets up a shift register that starts at zero, `next(acc=...)` feeds it the value for the next iteration, and `out(...)` sends a result out of the loop.
+
+You can of course implement everyone's favorite coding interview test, FizzBuzz:
+
+```python
+input n: int = 15
+ONE = 1
+THREE = 3
+FIVE = 5
+ZERO = 0
+for iterations(n) in(ONE, THREE, FIVE, ZERO):
+    i = add(x=index, y=ONE)
+    m3 = modulo(x=i, y=THREE)
+    m5 = modulo(x=i, y=FIVE)
+    fizz = equal(x=m3, y=ZERO)
+    buzz = equal(x=m5, y=ZERO)
+    case fizz in(buzz, i):
+        when True:
+            case buzz:
+                when True:
+                    W = "FizzBuzz"
+                    out(word=W)
+                when False:
+                    W = "Fizz"
+                    out(word=W)
+            out(word=word)
+        when False:
+            case buzz in(i):
+                when True:
+                    W = "Buzz"
+                    out(word=W)
+                when False:
+                    W = to_str(x=i)
+                    out(word=W)
+            out(word=word)
+    output line = word
+```
+
+Every indented block is a subdiagram. Values only enter it through `in(...)` and leave through `out(...)`, which is akin to a LabVIEW tunnel written in text. `case` and `when` work like a case structure, and every arm has to send out the same values.
+
+What really excites me about this is that if you keep the paradigm simple, you can have a very expressive language very quickly, and if you choose the right stack, you can run it on a very broad set of targets very quickly. If this were implemented in something like a WASM-compatible language, you could imagine running it in a browser or on a desktop with very little effort. And if the syntax is kept simple enough, or the architecture is scoped correctly, you can imagine running it on a microcontroller target, all while reaping the reward of that strong metaphor of blocks and wires that has stuck around all these years.
+
+The next thing to think about would be how you might actually implement something like this. For a first version I'm leaning on Python, so I can iterate on the language quickly, and it can still run in the browser through WebAssembly. I'll dig into that in the next post. I also have some fuzzy thoughts around how, if this were implemented all the way, there are some ways in which this could be a better language for agents than even traditional text-based languages. I will reserve those thoughts for a later blog that I will share once I've made some more progress on this idea. Be sure to keep an eye out for it.
