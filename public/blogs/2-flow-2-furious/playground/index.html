@@ -1,0 +1,24 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>dataflow playground</title>
+    <script>
+      // Set the theme before the first paint, so a saved Dark doesn't flash light.
+      // src/theme.ts keeps it up to date afterwards.
+      (function () {
+        var saved = null;
+        try { saved = localStorage.getItem("orukan.playground.theme"); } catch (e) {}
+        var dark = saved ? saved === "dark" : matchMedia("(prefers-color-scheme: dark)").matches;
+        document.documentElement.dataset.theme = dark ? "dark" : "light";
+      })();
+    </script>
+    <link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 16 16'><path d='M8 1 15 8 8 15 1 8Z' fill='none' stroke='%234f6bed' stroke-width='2'/></svg>" />
+    <script type="module" crossorigin src="./assets/index-7Yho-cNk.js"></script>
+    <link rel="stylesheet" crossorigin href="./assets/index-kGKwtO4J.css">
+  </head>
+  <body>
+    <div id="root"></div>
+  </body>
+</html>

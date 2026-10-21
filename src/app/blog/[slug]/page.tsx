@@ -5,6 +5,7 @@ import { notFound } from 'next/navigation';
 import rehypePrettyCode from 'rehype-pretty-code';
 import LightboxImage from '../LightboxImage';
 import ExpandableCard from '../ExpandableCard';
+import PlaygroundEmbed from '../PlaygroundEmbed';
 
 export function generateStaticParams() {
   return getAllPosts().map((post) => ({ slug: post.slug }));
@@ -45,7 +46,7 @@ export default async function BlogPostPage({ params }: { params: Promise<{ slug:
           {/* @ts-expect-error Async Server Component */}
           <MDXRemote
             source={post.content}
-            components={{ img: LightboxImage, LightboxImage, ExpandableCard, a: ArticleLink }}
+            components={{ img: LightboxImage, LightboxImage, ExpandableCard, PlaygroundEmbed, a: ArticleLink }}
             options={{
               mdxOptions: {
                 rehypePlugins: [[rehypePrettyCode, { theme: 'github-light', keepBackground: false }]],

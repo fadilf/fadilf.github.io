@@ -1,0 +1,29 @@
+---
+title: "2 Flow 2 Furious"
+date: "2026-10-21"
+excerpt: "A sequel to my last blog, now with a compiler, panels, and a playground you can run in your browser."
+---
+
+<video controls playsInline preload="metadata" src="/blogs/2-flow-2-furious/Dataflow%20Demo.mp4" style={{ width: "100%", borderRadius: "0.75rem" }}>
+  Your browser does not support the video tag.
+</video>
+
+You might have read my last blog about dataflow programming and how it's managed to stick around, not despite its differences but rather, I might argue, because of them. I had sketched a syntax for what the next generation of dataflow programming could look like, one that is built for the tooling of our new era. My essential idea was this: by having a representation that is text-first, Pythonic in syntax, corresponds one-to-one with a block diagram, and is compiled in a portable language, you would simultaneously enable a bunch of features for free.
+
+In contrast to typical dataflow development today, you would be able to:
+- Use an agent to write code and analyze code directly
+- View and execute code on cross-platform targets, including the web and in CI/CD pipelines
+- Perform Git operations directly against the logic without needing an intermediate representation
+- Refactor a codebase at a large scale with ease
+
+I was pretty enamored with the idea and had been wanting to write a compiler as a project for a while, so I thought this would be the perfect occasion to give it a try. I learned about the typical structural elements of a compiler, such as the lexer that converts your raw strings into tokens, the parser that converts tokens into an AST (abstract syntax tree), and the executor that follows the nodes and leaves of that syntax tree to execute the logic described in your files. Growing up, I was a big fan of the show *How It's Made*, so this felt like a fun visit behind the curtain of a code factory to see the steps that come before the assembly (pun intended).
+
+It's been both a tedious and fulfilling process, but I wanted to look ahead to see what's possible with this down the line. The logic I had laid out in that last blog only described syntax for the logic of the application but had no vision for a graphical user interface pattern. I wanted to take inspiration from my experience with functional components in TypeScript and apply that here to make an expressive but opinionated representation for user interfaces (that, if needed, could be as rich or as bare-bones as a developer might desire). I think the syntax I chose in the end (after a long deliberation process) strikes a happy medium, though I imagine I'll keep evolving it as I continue to work on this. 
+
+As part of my efforts to try to look ahead, I drove an agentic process to implement that panel syntax in a separate forward-looking branch building upon my more hands-on development of the logic compiler. This was the result of my effort (view in fullscreen on desktop for best effect):
+
+<PlaygroundEmbed src="/blogs/2-flow-2-furious/playground/index.html" title="Dataflow playground" />
+
+The examples I've provided illustrate the use of this dataflow logic in some simple, typical applications like a minimal test station but also some really out-there applications (Conway's Game of Life and a snake game). All of them have their logic embodied in dataflow, which I think highlights how flexible a medium for expression it can be. Additionally, these examples were written by LLMs that were never been trained on this programming language, which bodes well for the idea that you can just make a bespoke programming language and have it be used by an AI agent (even in ways that are wholly unique to that language). This is despite the language's restrictions, such as variable immutability and execution dependencies, as those restrictions are expressed uniquely in its spec.
+
+So what's next for this project? I'm thinking a graphically editable dataflow representation as well as an agent chat on the side would demonstrate that it has the bones of a potentially complete development experience. Then we can really start playing around with features like a wider set of built-ins or added syntax for things like auto-tunneling. But before all that, I might do some speculating about a concept I had touched on in the last blog: why the dataflow paradigm could be more optimal for agents to work with than regular text-based languages (for reasons that'll get pretty technical). If you're into that sort of thing, keep an eye out for it.
