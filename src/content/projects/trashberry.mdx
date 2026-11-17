@@ -1,0 +1,69 @@
+---
+title: "Trashberry: 2-Way Vending Machine"
+excerpt: "A reverse-vending and sorting system built from upcycled printers, a Raspberry Pi, and LEGO EV3, that tags every item so recycling can sort itself and reward the people who do it."
+---
+
+<LightboxImage src="/thumbnails/trashberry.jpg" alt="The Trashberry vending and sorting machines" caption="Me and my teammate as finalists at the National AI & Robotics For Good Awards" />
+
+Trashberry started in 2016 as a World Robot Olympiad entry. That year's theme was "Rap the Scrap", about reducing, managing, and recycling waste. Over the next few years it grew into a project I kept returning to, through exhibitions, awards, and an attempt to deploy it in my school.
+
+<LightboxImage src="/projects/trashberry/wro-booth.jpg" alt="The Trashberries Inc. booth at the 2016 World Robot Olympiad, with both printer-based machines on the counter and the project posters behind them" caption="Our booth at WRO 2016" />
+
+## The problem
+
+In India, litter and food packaging degrade natural landscapes and historic sites. In Dubai, where I grew up, packaging from the beaches washes into the sea. Globally, people generate an estimated 1.9 billion tons of waste a year, and roughly 30% of it is never collected.
+
+The idea came from ["Separation Anxiety"](https://99percentinvisible.org/episode/separation-anxiety/), a 2016 episode of *99% Invisible* that compares how Taipei and San Francisco deal with their trash. The two cities show that recycling well has no cheap shortcut. Taipei reaches recycling rates around 55%, but it relies on residents hand-sorting their waste and on fines for anyone who doesn't. San Francisco makes recycling effortless for residents, but sorts everything centrally with machinery worth millions of dollars, some of it only to separate colored packaging from clear. Neither model transfers well to a developing country.
+
+From that research we took three requirements: recycling had to be **convenient**, it had to **reward** people, and it had to be **reliable**.
+
+## The idea
+
+Most of the cost of recycling is sorting. Trashberry moves sorting to the point of disposal and does it one item at a time. If every product carries a tag that says what it's made of, a cheap machine can read the tag and drop the item into the correct bin, with no optical sorting line needed.
+
+The same tag also identifies who bought the item. Users sign in with the RFID card they already carry. In the UAE that's the Nol transit card, so nobody needs a new card. Recycling an item earns **Trashberries**, a credit that can be spent on the next purchase.
+
+## The machines
+
+The prototype has two machines. Both are built from the cases and mechanisms of scrapped HP and Epson printers, plus a Raspberry Pi, a LEGO Mindstorms EV3, and a web server that ties them together.
+
+**The vending machine.** It holds three kinds of items and dispenses them using two motors. The printer's sliding carriage, driven by its original DC motor through an H-bridge on the Pi, pushes each item past an RFID reader to the customer. A tablet on the front runs the HTML5 interface. Customers scan their card, pick an item, and pay with credit or Trashberries. The server then records that specific item against their account.
+
+<LightboxImage src="/projects/trashberry/printer-carriage.jpg" alt="A printer's sliding carriage with an RFID reader mounted on it, wired by ribbon cable to a Raspberry Pi" caption="RFID reader on the printer carriage" />
+
+**The sorting machine.** It's built from another printer case, divided into four bins: one for each of the three packaging materials, plus general waste. When an item is scanned, the Pi looks up its material, and a carriage on top of the case travels along the bins, using a light sensor to count the alternating colored markers until it reaches the right one. It drops the item, reverses until it sees the red home marker, and credits the user with Trashberries.
+
+**Making the Pi and the EV3 talk.** The EV3 only understood its own sensors, so we built a small circuit that lets the Pi pretend to be three touch sensors. Each "button" stands for a material. The Pi presses the right one and the EV3 drives to the matching bin.
+
+<LightboxImage src="/blogs/the-data-must-flow/WRO%202016%20Programming%20Poster.jpg" alt="The WRO 2016 programming poster: a flowchart of the vending and sorting machines, each running on a Raspberry Pi, with a PHP server between them" caption="Program flowchart" />
+## From RFID to barcodes
+
+Our first design used RFID on everything. A unique tag per item made the system both a carrot and a stick: we could reward people who recycled and also trace littered packaging back to whoever bought it.
+
+Showing the project at public exhibitions changed our minds. People liked the idea, but the most common reaction was that the penalties would put them off using the system at all, which defeated the purpose. The cost estimates didn't help either. Manufacturers wouldn't add tags, so retailers would have to, and reusing tags at scale didn't pay for itself.
+
+So the later version switched to the **barcodes already printed on packaging**, read by a camera. It loses the ability to trace litterers, but it costs almost nothing per item and nobody has to change their packaging. RFID stayed in the system only for identifying users.
+
+## Where it went
+
+- **World Robot Olympiad (2016):** the original two-machine prototype.
+- **National Innovation Exhibition:** public demos, and the user feedback that led us to drop the penalty system.
+- **UAE National AI & Robotics for Good Awards:** one of ten finalist teams, and the youngest participants in the award's history, competing against teams from companies and universities.
+- **Think Science and the Emirates Energy Award:** further exhibitions of the project.
+
+The machine changed a lot along the way. The printer-based prototype became a standalone kiosk. That later became a white cabinet with a tablet built into the front.
+
+<figure>
+  <div className="grid grid-cols-2 grid-rows-2 gap-2 aspect-[4/3]">
+    <div className="row-span-2"><LightboxImage src="/projects/trashberry/nie-kiosk.jpg" alt="Two team members beside the black Trashberry kiosk at the National Innovation Exhibition, with the Trashberries Inc. poster above it" className="w-full h-full object-cover !m-0 rounded-lg" /></div>
+    <LightboxImage src="/projects/trashberry/think-science.jpg" alt="The Trashberry booth at Think Science: two team members at a desk beside the white Trashberry cabinet, with the program flowchart poster behind them" className="w-full h-full object-cover !m-0 rounded-lg" />
+    <LightboxImage src="/projects/trashberry/robotics-for-good.jpg" alt="Two team members with the white Trashberry cabinet in a booth at the UAE AI & Robotics for Good Award" className="w-full h-full object-cover !m-0 rounded-lg" />
+  </div>
+  <figcaption className="text-center">National Innovation Exhibition (left), Think Science (top right), UAE AI &amp; Robotics for Good Award (bottom right)</figcaption>
+</figure>
+
+Here are the machines running:
+
+<div className="aspect-video rounded-xl overflow-hidden">
+  <iframe src="https://www.youtube.com/embed/mWMPlSx7AGo" title="Trashberry in action" className="w-full h-full border-0" allowFullScreen />
+</div>

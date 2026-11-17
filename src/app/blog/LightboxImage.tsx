@@ -8,9 +8,10 @@ interface LightboxImageProps {
   alt?: string;
   className?: string;
   style?: React.CSSProperties;
+  caption?: React.ReactNode;
 }
 
-export default function LightboxImage({ src, alt, className, style }: LightboxImageProps) {
+export default function LightboxImage({ src, alt, className, style, caption }: LightboxImageProps) {
   const [open, setOpen] = useState(false);
 
   useEffect(() => {
@@ -29,16 +30,27 @@ export default function LightboxImage({ src, alt, className, style }: LightboxIm
     };
   }, [open]);
 
+  const image = (
+    // eslint-disable-next-line @next/next/no-img-element
+    <img
+      src={src}
+      alt={alt}
+      className={`${className ?? ""} ${caption ? "mx-auto" : ""} cursor-zoom-in`}
+      style={style}
+      onClick={() => setOpen(true)}
+    />
+  );
+
   return (
     <>
-      {/* eslint-disable-next-line @next/next/no-img-element */}
-      <img
-        src={src}
-        alt={alt}
-        className={`${className ?? ""} cursor-zoom-in`}
-        style={style}
-        onClick={() => setOpen(true)}
-      />
+      {caption ? (
+        <figure className="text-center">
+          {image}
+          <figcaption>{caption}</figcaption>
+        </figure>
+      ) : (
+        image
+      )}
       {open &&
         createPortal(
           <div

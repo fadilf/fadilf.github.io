@@ -3,8 +3,6 @@ title: "SpeakEasy: Silent Comms for the Battlefield"
 excerpt: "A helmet-mounted, nonverbal and nonvisual communication system for stealth operations: silent buttons in, LoRa mesh across, bone conduction and haptics out."
 ---
 
-{/* DRAFT: written from the SpeakEasy project files. Items marked TODO need your confirmation or input. */}
-
 <LightboxImage src="/projects/speakeasy/poster.jpg" alt="SpeakEasy project poster" />
 
 SpeakEasy was a two-semester design project at Rice's Oshman Engineering Design Kitchen (OEDK), sponsored as part of a larger Smart Helmet effort supported by the Office of Naval Research. Our team of six (three from ECE, three from Bioengineering) set out to answer a simple question: how do soldiers talk to each other when they can't speak and can't see each other?
@@ -44,19 +42,17 @@ The device splits into three stages: input, transmission, and output.
 
 ## My contributions
 
-I worked across the output hardware, testing, and the electronics that tie everything together. {/* TODO: confirm and adjust. This list is inferred from weekly meeting notes and the invention disclosure, so correct anything I've over- or under-stated. */}
+I worked across the output hardware, testing, and the electronics that tie everything together.
 
 - **Haptic headband.** I owned the haptics from the first prototype in Cycle 2 through the finished headband in Cycle 3: six coin motors, driven from an ESP32, placed to correspond to clock positions around the head.
 - **Bone conduction output.** I built this with a teammate, from a proof of concept through the text-to-speech playback pipeline on the ESP32. A command library of pre-generated voice clips is looked up by the message number that arrives over LoRa.
 - **End-to-end timing methodology.** I redesigned our timing test rig so we could measure the full path from a prompt on the sender's screen to the receiver's response, which is what let us claim the under-5-seconds spec honestly.
 - **Mesh networking and location.** I ran the mesh network tests, and with a teammate explored using Meshtastic's built-in position reporting to show where each squad member is (the screenshot below is two nodes on the Rice campus).
 - **PCB design and hardware integration.** With two teammates, I worked on consolidating the perfboard wiring into a custom PCB, and on getting every peripheral running from battery power.
-- **Research and stretch goals.** I surveyed ATAK and 5G options for transmission, and took on volume scaling for the bone conduction as a stretch goal. {/* TODO: say what happened here. The final report notes volume scaling was not completed. */}
+- **Research and stretch goals.** I surveyed ATAK and 5G options for transmission, and took on volume scaling for the bone conduction as a stretch goal.
 <LightboxImage src="/projects/speakeasy/haptics.png" alt="Six coin haptic motors on a ribbon cable" />
 
 <LightboxImage src="/projects/speakeasy/meshgps.png" alt="Meshtastic app showing two helmet nodes on a campus map" />
-
-{/* TODO: add 1-2 sentences or a photo of what you personally found hardest, e.g. tuning haptic intensity. */}
 
 ## Future possibilities
 

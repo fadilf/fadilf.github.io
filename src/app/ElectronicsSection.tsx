@@ -24,7 +24,7 @@ const electronicsItems = [
 		image: "/thumbnails/hornbill.jpg",
 	},
 	{
-		link: "https://www.youtube.com/watch?v=mWMPlSx7AGo",
+		link: "/project/trashberry",
 		title: "Trashberry",
 		doneFor: "Personal",
 		timePeriod: [2016, 2022],
