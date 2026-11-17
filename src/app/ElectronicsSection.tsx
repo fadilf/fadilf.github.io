@@ -51,7 +51,7 @@ const electronicsItems = [
 		image: "/thumbnails/steam.jpg",
 	},
 	{
-		link: "",
+		link: "/project/led-visualizer",
 		title: "LED Visualizer",
 		doneFor: "ELEC 327",
 		timePeriod: [2022],
