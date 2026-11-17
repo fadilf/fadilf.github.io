@@ -1,5 +1,6 @@
 import { MDXRemote } from 'next-mdx-remote/rsc';
 import rehypePrettyCode from 'rehype-pretty-code';
+import remarkGfm from 'remark-gfm';
 import LightboxImage from './LightboxImage';
 import ExpandableCard from './ExpandableCard';
 import PlaygroundEmbed from './PlaygroundEmbed';
@@ -22,6 +23,8 @@ export default function MdxArticle({ source }: { source: string }) {
       prose-li:text-apple-text
       prose-ul:text-apple-text
       prose-blockquote:border-apple-cardborder prose-blockquote:text-apple-text
+      prose-th:text-apple-text prose-td:text-apple-text
+      prose-thead:border-apple-cardborder prose-tr:border-apple-cardborder
     ">
       {/* @ts-expect-error Async Server Component */}
       <MDXRemote
@@ -29,6 +32,7 @@ export default function MdxArticle({ source }: { source: string }) {
         components={{ img: LightboxImage, LightboxImage, ExpandableCard, PlaygroundEmbed, a: ArticleLink }}
         options={{
           mdxOptions: {
+            remarkPlugins: [remarkGfm],
             rehypePlugins: [[rehypePrettyCode, { theme: 'github-light', keepBackground: false }]],
           },
         }}

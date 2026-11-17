@@ -21,7 +21,8 @@ function ProjectCard({
     let [greyX, greyY] = [xHalf + (xHalf * Math.cos(angle)), yHalf + (yHalf * Math.sin(angle))];
     let [goldX, goldY] = [2 * xHalf - greyX, 2 * yHalf - greyY]
     return (
-        <a className='project-item' href={project.link || undefined} target="_blank" rel="noopener noreferrer">
+        <a className='project-item' href={project.link || undefined}
+            {...(project.link.startsWith('/') ? {} : { target: "_blank", rel: "noopener noreferrer" })}>
             <div className="project-lights" suppressHydrationWarning>
                 <div className="grey-light" suppressHydrationWarning style={{
                     boxShadow: `rgba(255, 255, 255, 0.6) ${greyX}rem ${greyY}rem 10rem 6rem`

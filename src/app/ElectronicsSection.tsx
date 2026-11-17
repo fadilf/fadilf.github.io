@@ -6,13 +6,13 @@ import ProjectCardList from './ProjectCard';
 
 const electronicsItems = [
 	{
-		link: "",
+		link: "/project/speakeasy",
 		title: "Silent Comms Device",
 		doneFor: "Senior Design Project",
 		timePeriod: [2022, 2023],
 		extract: "Developed non-verbal, non-visual communication medium with silent switches, bone conduction, and haptic motors.",
 		skills: ["ESP32", "LoRa", "EasyEDA", "PHP", "Python"],
-		image: "/thumbnails/speakeasy.jpg",
+		image: "/projects/speakeasy/poster.jpg",
 	},
 	{
 		link: "",
