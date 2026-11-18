@@ -6,6 +6,15 @@ import ProjectCardList from './ProjectCard';
 
 const AIMLItems = [
 	{
+		link: "https://github.com/fadilf/notedown",
+		title: "Notedown",
+		doneFor: "Personal",
+		timePeriod: [2026],
+		extract: "I wanted to dictate into any app on my phone without a subscription, so I built an Android app with a floating mic that transcribes speech through OpenRouter models and can reformat it into lists or checklists before inserting it into the text field.",
+		skills: ["kotlin"],
+		image: "/thumbnails/notedown.webp",
+	},
+	{
 		link: "https://fadileledath.com/blog/g-speak",
 		title: "g-speak",
 		doneFor: "Personal",
